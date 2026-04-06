@@ -187,6 +187,11 @@ const ContactForm = (() => {
     const form = document.getElementById('contact-form');
     if (!form) return;
 
+    // On production (Netlify), let the form POST natively — Netlify Forms handles it
+    const isProd = window.location.hostname !== 'localhost' &&
+                   window.location.hostname !== '127.0.0.1';
+    if (isProd) return;
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (!validate(form)) return;
@@ -196,7 +201,7 @@ const ContactForm = (() => {
       btn.disabled  = true;
       btn.textContent = 'Sending…';
 
-      // Simulate async send
+      // Simulate async send (local dev only)
       await new Promise(r => setTimeout(r, 1500));
 
       btn.disabled  = false;
