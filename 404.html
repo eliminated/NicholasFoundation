@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Page not found — The Nicholas Foundation." />
+  <meta name="robots" content="noindex" />
+  <title>404 — Signal Lost | The Nicholas Foundation</title>
+  <link rel="stylesheet" href="css/main.css" /><link rel="stylesheet" href="css/components.css" /><link rel="stylesheet" href="css/layout.css" /><link rel="stylesheet" href="css/animations.css" /><link rel="stylesheet" href="css/enhancements.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234F8EF7'/><text y='72' x='50' font-size='60' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'>N</text></svg>" />
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--sp-8) var(--sp-6);
+      position: relative;
+      overflow: hidden;
+    }
+    .error-grid { position: absolute; inset: 0; background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 48px 48px; opacity: 0.25; }
+    .error-code {
+      font-family: var(--font-heading);
+      font-size: clamp(6rem, 18vw, 14rem);
+      font-weight: 900;
+      line-height: 1;
+      background: var(--grad-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
+      z-index: 1;
+      margin-bottom: var(--sp-2);
+      letter-spacing: -0.04em;
+    }
+    .error-glitch {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: var(--text-sm);
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: var(--sp-6);
+      position: relative;
+      z-index: 1;
+      opacity: 0.8;
+    }
+    .error-msg {
+      position: relative;
+      z-index: 1;
+      max-width: 500px;
+    }
+    .error-msg h1 {
+      font-size: clamp(var(--text-xl), 3vw, var(--text-2xl));
+      margin-bottom: var(--sp-4);
+    }
+    .error-msg p {
+      color: var(--text-muted);
+      margin-bottom: var(--sp-8);
+    }
+    .error-links {
+      display: flex;
+      gap: var(--sp-4);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: var(--sp-10);
+    }
+    .error-pages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-2);
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      max-width: 480px;
+    }
+    .error-page-link {
+      padding: var(--sp-2) var(--sp-4);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .error-page-link:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      background: var(--bg-hover);
+    }
+    .error-countdown {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      margin-top: var(--sp-6);
+      position: relative;
+      z-index: 1;
+    }
+    .error-countdown span { color: var(--accent); font-weight: 700; }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div id="scroll-progress"></div>
+<nav id="navbar" class="scrolled" aria-label="Main navigation">
+  <div class="navbar-container">
+    <div class="navbar-left"><button id="hamburger" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button></div>
+    <a href="index.html" class="navbar-logo"><div class="navbar-logo-mark">N</div><div class="navbar-logo-text"><span class="navbar-logo-name">Nicholas Foundation</span><span class="navbar-logo-tagline">Engineering the Future</span></div></a>
+    <div class="navbar-right">
+      <button id="search-btn" aria-label="Search (Ctrl+K)" title="Search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button>
+      <button id="theme-toggle" aria-label="Toggle theme"></button>
+      <button id="profile-btn" aria-label="Profile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
+    </div>
+  </div>
+</nav>
+<div id="sidebar-backdrop"></div>
+<aside id="sidebar" role="dialog" aria-label="Navigation" aria-modal="true">
+  <div class="sidebar-header"><div class="sidebar-logo"><div class="sidebar-logo-mark">N</div><span class="sidebar-logo-name">Nicholas Foundation</span></div><button id="sidebar-close" aria-label="Close">✕</button></div>
+  <nav class="sidebar-nav">
+    <div class="sidebar-nav-group"><div class="sidebar-nav-label">Main</div><a href="index.html" class="sidebar-nav-link"><span class="nav-icon">🏠</span> Home</a><a href="about.html" class="sidebar-nav-link"><span class="nav-icon">🔭</span> About</a><a href="products.html" class="sidebar-nav-link"><span class="nav-icon">⚡</span> Products</a><a href="blog.html" class="sidebar-nav-link"><span class="nav-icon">📡</span> Blog</a></div>
+    <div class="sidebar-nav-group"><div class="sidebar-nav-label">Company</div><a href="careers.html" class="sidebar-nav-link"><span class="nav-icon">🚀</span> Careers</a><a href="contact.html" class="sidebar-nav-link"><span class="nav-icon">✉️</span> Contact</a><a href="support.html" class="sidebar-nav-link"><span class="nav-icon">🛡️</span> Support</a><a href="faq.html" class="sidebar-nav-link"><span class="nav-icon">💡</span> FAQ</a><a href="privacy.html" class="sidebar-nav-link"><span class="nav-icon">🔒</span> Privacy</a></div>
+  </nav>
+  <div class="sidebar-footer"><div class="sidebar-socials"><a href="#" class="sidebar-social-link">𝕏</a><a href="#" class="sidebar-social-link">in</a></div><p class="sidebar-copy">© <span id="sidebar-year"></span> The Nicholas Foundation</p></div>
+</aside>
+
+<div class="page-wrapper">
+<main id="main-content">
+  <div class="error-page">
+    <div class="error-grid" aria-hidden="true"></div>
+    <div class="error-code">404</div>
+    <code class="error-glitch">// signal_lost: route not found</code>
+    <div class="error-msg">
+      <h1>Page Not Found</h1>
+      <p>The page you're looking for has either been moved, deleted, or never existed. Check the URL or use the links below to get back on track.</p>
+      <div class="error-links">
+        <a href="index.html" class="btn btn-primary btn-lg">Back to Home</a>
+        <a href="support.html" class="btn btn-secondary btn-lg">Support Center</a>
+      </div>
+      <div class="error-pages">
+        <a href="about.html"    class="error-page-link">About Us</a>
+        <a href="products.html" class="error-page-link">Products</a>
+        <a href="blog.html"     class="error-page-link">Blog</a>
+        <a href="careers.html"  class="error-page-link">Careers</a>
+        <a href="contact.html"  class="error-page-link">Contact</a>
+        <a href="faq.html"      class="error-page-link">FAQ</a>
+        <a href="privacy.html"  class="error-page-link">Privacy</a>
+      </div>
+      <div class="error-countdown">Redirecting to Home in <span id="countdown">10</span>s</div>
+    </div>
+  </div>
+</main>
+
+<!-- Cookie Consent -->
+<div id="cookie-consent" class="cookie-banner" role="dialog" aria-modal="true" aria-label="Cookie preferences" aria-live="polite">
+  <div class="cookie-text"><strong>🍪 We use minimal cookies</strong> to save your preferences and understand how our site is used. <a href="privacy.html#cookies" class="cookie-link">Learn more</a></div>
+  <div class="cookie-actions"><button id="cookie-reject" class="btn btn-sm btn-secondary">Essential Only</button><button id="cookie-accept" class="btn btn-sm btn-primary">Accept All</button></div>
+</div>
+</div>
+
+<!-- Search Modal -->
+<div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Site search" tabindex="-1">
+  <div class="search-modal">
+    <div class="search-modal-header">
+      <div class="search-wrap" style="flex:1;"><span class="search-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></span><input type="search" id="search-field" class="search-input" placeholder="Search pages, topics, platforms…" autocomplete="off" aria-label="Search" /></div>
+      <button id="search-close" class="search-close-btn" aria-label="Close search">ESC</button>
+    </div>
+    <div id="search-results" class="search-results" aria-live="polite"></div>
+    <div class="search-footer"><span>Press <kbd>↑</kbd><kbd>↓</kbd> to navigate · <kbd>Enter</kbd> to open · <kbd>ESC</kbd> to close</span></div>
+  </div>
+</div>
+<div id="page-transition-overlay" aria-hidden="true"></div>
+
+<button id="back-to-top" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+<script>
+  document.getElementById('sidebar-year').textContent = new Date().getFullYear();
+  // Auto-redirect countdown
+  let count = 10;
+  const el = document.getElementById('countdown');
+  const t = setInterval(() => {
+    el.textContent = --count;
+    if (count <= 0) { clearInterval(t); window.location.href = 'index.html'; }
+  }, 1000);
+</script>
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/enhancements.js"></script>
+</body>
+</html>

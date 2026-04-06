@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Frequently Asked Questions — TNF platforms, partnerships, open-source licensing, and support." />
+  <title>FAQ — The Nicholas Foundation</title>
+    <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="/assets/og-card.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="/assets/og-card.png" />
+<link rel="stylesheet" href="css/main.css" /><link rel="stylesheet" href="css/components.css" /><link rel="stylesheet" href="css/layout.css" /><link rel="stylesheet" href="css/animations.css" /><link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/enhancements.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234F8EF7'/><text y='72' x='50' font-size='60' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'>N</text></svg>" />
+  <!-- FAQPage Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"What is The Nicholas Foundation?","acceptedAnswer":{"@type":"Answer","text":"TNF is a technology-first nonprofit foundation dedicated to building open-source systems for global impact. Founded in 2015, we develop platforms in AI, blockchain, connectivity, cybersecurity, and research."}},
+      {"@type":"Question","name":"Is TNF a nonprofit organization?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Nicholas Foundation is a registered 501(c)(3) nonprofit funded through philanthropic grants, foundation partnerships, enterprise support contracts, and donations."}},
+      {"@type":"Question","name":"How do I get started with FedCore?","acceptedAnswer":{"@type":"Answer","text":"Install FedCore via pip: pip install fedcore. Our quickstart guide covers your first training run in under 30 minutes. Visit docs.nicholasfoundation.org for full guides."}},
+      {"@type":"Question","name":"Is there a cost for NGOs to use TNF platforms?","acceptedAnswer":{"@type":"Answer","text":"All TNF platforms are 100% free for NGOs and humanitarian organizations with valid nonprofit registration. Priority support and elevated API limits are also available at no cost to qualifying organizations."}},
+      {"@type":"Question","name":"What licenses do TNF projects use?","acceptedAnswer":{"@type":"Answer","text":"Most TNF software is released under the MIT License. Some datasets use Creative Commons CC BY 4.0. Protocol specifications are released as open standards with no licensing restrictions."}},
+      {"@type":"Question","name":"Can I use TNF code in a commercial product?","acceptedAnswer":{"@type":"Answer","text":"Yes. Under the MIT License, you can freely use, modify, and distribute TNF code in commercial products with proper attribution."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div id="scroll-progress"></div>
+<nav id="navbar" class="transparent" aria-label="Main navigation">
+  <div class="navbar-container">
+    <div class="navbar-left"><button id="hamburger" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button></div>
+    <a href="index.html" class="navbar-logo"><div class="navbar-logo-mark">N</div><div class="navbar-logo-text"><span class="navbar-logo-name">Nicholas Foundation</span><span class="navbar-logo-tagline">Engineering the Future</span></div></a>
+    <div class="navbar-right"><button id="search-btn" aria-label="Search (Ctrl+K)" title="Search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button><button id="theme-toggle" aria-label="Toggle theme"></button><button id="profile-btn" aria-label="Profile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button></div>
+  </div>
+</nav>
+<div id="sidebar-backdrop"></div>
+<aside id="sidebar" role="dialog" aria-label="Navigation" aria-modal="true">
+  <div class="sidebar-header"><div class="sidebar-logo"><div class="sidebar-logo-mark">N</div><span class="sidebar-logo-name">Nicholas Foundation</span></div><button id="sidebar-close" aria-label="Close">✕</button></div>
+  <nav class="sidebar-nav">
+    <div class="sidebar-nav-group"><div class="sidebar-nav-label">Main</div><a href="index.html" class="sidebar-nav-link"><span class="nav-icon">🏠</span> Home</a><a href="about.html" class="sidebar-nav-link"><span class="nav-icon">🔭</span> About</a><a href="products.html" class="sidebar-nav-link"><span class="nav-icon">⚡</span> Products</a><a href="blog.html" class="sidebar-nav-link"><span class="nav-icon">📡</span> Blog</a></div>
+    <div class="sidebar-nav-group"><div class="sidebar-nav-label">Company</div><a href="careers.html" class="sidebar-nav-link"><span class="nav-icon">🚀</span> Careers</a><a href="contact.html" class="sidebar-nav-link"><span class="nav-icon">✉️</span> Contact</a><a href="support.html" class="sidebar-nav-link"><span class="nav-icon">🛡️</span> Support</a><a href="faq.html" class="sidebar-nav-link active"><span class="nav-icon">💡</span> FAQ</a><a href="privacy.html" class="sidebar-nav-link"><span class="nav-icon">🔒</span> Privacy</a></div>
+  </nav>
+  <div class="sidebar-footer"><div class="sidebar-socials"><a href="#" class="sidebar-social-link">𝕏</a><a href="#" class="sidebar-social-link">in</a></div><p class="sidebar-copy">© <span id="sidebar-year"></span> The Nicholas Foundation</p></div>
+</aside>
+
+<div class="page-wrapper">
+<!-- Announcement Banner -->
+<div id="announcement-banner" class="announcement-banner" role="alert">
+  <div class="announcement-content"><span class="announcement-icon">🚀</span><span>FedCore v3 is now live — <a href="products.html#ai" class="announcement-link">See what's new →</a></span></div>
+  <button class="announcement-close" id="close-announcement" aria-label="Dismiss">✕</button>
+</div>
+
+<main id="main-content">
+
+  <section class="page-hero" aria-labelledby="faq-hero-h">
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <span class="section-label">FAQ</span>
+      <h1 id="faq-hero-h">Frequently Asked <span class="grad-text">Questions</span></h1>
+      <p>Everything you need to know about TNF, our platforms, and working with us.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="FAQ content">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+
+        <!-- Category tabs -->
+        <div style="display:flex;gap:var(--sp-2);flex-wrap:wrap;margin-bottom:var(--sp-8);" class="reveal reveal-up" role="tablist" aria-label="FAQ categories">
+          <button class="tag active" onclick="showFAQCategory('all')" role="tab">All</button>
+          <button class="tag" onclick="showFAQCategory('general')" role="tab">General</button>
+          <button class="tag" onclick="showFAQCategory('technical')" role="tab">Technical</button>
+          <button class="tag" onclick="showFAQCategory('partnerships')" role="tab">Partnerships</button>
+          <button class="tag" onclick="showFAQCategory('licensing')" role="tab">Licensing</button>
+        </div>
+
+        <!-- General FAQs -->
+        <div id="faq-general" class="reveal reveal-up">
+          <h4 class="grad-text" style="margin-bottom:var(--sp-4);font-size:var(--text-base);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">General</h4>
+
+          <div class="accordion-item" data-faq-category="general">
+            <button class="accordion-trigger" aria-expanded="false">
+              What is The Nicholas Foundation?
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content"><div class="accordion-content-inner">
+              The Nicholas Foundation (TNF) is a technology-first nonprofit foundation dedicated to building open-source systems that drive global impact. Founded in 2015, we develop and maintain platforms in AI, blockchain, connectivity, cybersecurity, and research — deploying them freely to communities, governments, and organizations worldwide.
+            </div></div>
+          </div>
+
+          <div class="accordion-item" data-faq-category="general">
+            <button class="accordion-trigger" aria-expanded="false">
+              Is TNF a nonprofit organization?
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content"><div class="accordion-content-inner">
+              Yes. The Nicholas Foundation is a registered 501(c)(3) nonprofit organization. We are funded through philanthropic grants, foundation partnerships, enterprise support contracts, and community donations. All surplus funds are reinvested directly into our platforms and research programs.
+            </div></div>
+          </div>
+
+          <div class="accordion-item" data-faq-category="general">
+            <button class="accordion-trigger" aria-expanded="false">
+              How is TNF funded?
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content"><div class="accordion-content-inner">
+              TNF receives funding from: (1) philanthropic grants from major foundations, (2) enterprise support agreements with organizations using our platforms, (3) government contracting for humanitarian deployments, and (4) individual and organizational donations. Our annual financial report is publicly available for full transparency.
+            </div></div>
+          </div>
+
+          <div class="accordion-item" data-faq-category="general">
+            <button class="accordion-trigger" aria-expanded="false">
+              Where is TNF headquartered?
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content"><div class="accordion-content-inner">
+              TNF is a fully distributed organization with team members in 28 countries. We have legal registration in the United States and operational hubs coordinated across UTC-8 to UTC+8 time zones. We believe that distributed teams build better global products.
+            </div></div>
+          </div>
+        </div>
+
+        <!-- Technical FAQs -->
+        <div id="faq-technical" class="reveal reveal-up stagger-1" style="margin-top:var(--sp-8);">
+          <h4 class="grad-text" style="margin-bottom:var(--sp-4);font-size:var(--text-base);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Technical</h4>
+
+          <div class="accordion-item" data-faq-category="technical">
+            <button class="accordion-trigger" aria-expanded="false">
+              How do I get started with FedCore?
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content"><div class="accordion-content-inner">
+              Install FedCore via pip: <code style="background:var(--bg-elevated);padding:2px 6px;border-radius:4px;">pip install fedcore</code>. Our quickstart guide covers your first training run, configuring federated nodes, and privacy settings in under 30 minutes. Visit our documentation at docs.nicholasfoundation.org for full guides.
+            </div></div>
+          </div>
+
+          <div class="accordion-item" data-faq-category="technical">
+            <button class="accordion-trigger" aria-expanded="false">
+              What are the rate limits for the GlobalPulse API?
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content"><div class="accordion-content-inner">
+              Community tier: 1,000 requests/hour. Verified nonprofit partners: 50,000 requests/hour. Enterprise agreements: custom limits. Rate limit headers are included in every API response. Contact us if you need higher limits for a humanitarian or research use case — we often grant elevated access at no cost.
+            </div></div>
+          </div>
+
+          <div class="accordion-item" data-faq-category="technical">
+            <button class="accordion-trigger" aria-expanded="false">
+              Does OfflineKit work on all mobile platforms?
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content"><div class="accordion-content-inner">
+              Yes. OfflineKit is built as a Progressive Web App (PWA) toolkit and works on any device with a modern browser — including low-end Android devices. Native wrappers for iOS (Swift) and Android (Kotlin) are also available for deeper OS integration. Minimum requirements: Android 6.0+ or iOS 12+.
+            </div></div>
+          </div>
+        </div>
+
+        <!-- Partnerships FAQs -->
+        <div id="faq-partnerships" class="reveal reveal-up stagger-2" style="margin-top:var(--sp-8);">
+          <h4 class="grad-text" style="margin-bottom:var(--sp-4);font-size:var(--text-base);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Partnerships</h4>
+
+          <div class="accordion-item" data-faq-category="partnerships">
+            <button class="accordion-trigger" aria-expanded="false">
+              How do we become a TNF partner organization?
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content"><div class="accordion-content-inner">
+              Submit a partnership inquiry via our Contact page. We onboard NGOs, governments, research institutions, and enterprises. The process involves a brief alignment call, technical assessment, and agreement on a partnership scope. Most partnerships are activated within 2-4 weeks.
+            </div></div>
+          </div>
+
+          <div class="accordion-item" data-faq-category="partnerships">
+            <button class="accordion-trigger" aria-expanded="false">
+              Is there a cost for NGOs to use TNF platforms?
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content"><div class="accordion-content-inner">
+              All TNF platforms are 100% free for NGOs and humanitarian organizations with valid nonprofit registration. Priority support, elevated API limits, and dedicated engineering time are available through our Nonprofit Support tier — also at no cost to qualifying organizations. Enterprise support contracts are available for commercial entities.
+            </div></div>
+          </div>
+        </div>
+
+        <!-- Licensing FAQs -->
+        <div id="faq-licensing" class="reveal reveal-up stagger-3" style="margin-top:var(--sp-8);">
+          <h4 class="grad-text" style="margin-bottom:var(--sp-4);font-size:var(--text-base);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Licensing</h4>
+
+          <div class="accordion-item" data-faq-category="licensing">
+            <button class="accordion-trigger" aria-expanded="false">
+              What licenses do TNF projects use?
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content"><div class="accordion-content-inner">
+              Most TNF software is released under the MIT License, allowing free commercial and non-commercial use. Some datasets in OpenData Commons use Creative Commons (CC BY 4.0). Protocol specifications like DID.chain are released as open standards with no licensing restrictions. All license details are prominently listed in each project's GitHub repository.
+            </div></div>
+          </div>
+
+          <div class="accordion-item" data-faq-category="licensing">
+            <button class="accordion-trigger" aria-expanded="false">
+              Can I use TNF code in a commercial product?
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content"><div class="accordion-content-inner">
+              Yes. Under the MIT License, you can freely use, modify, and distribute TNF code in commercial products — with proper attribution. We only ask that if your product builds heavily on our platforms, you consider contributing back improvements and consider becoming a TNF partner to support ongoing development.
+            </div></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Still need help -->
+      <div class="text-center" style="margin-top:var(--sp-16);">
+        <div class="reveal reveal-up" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-xl);padding:var(--sp-10);max-width:560px;margin:0 auto;">
+          <div style="font-size:2.5rem;margin-bottom:var(--sp-4);">🤔</div>
+          <h3 style="margin-bottom:var(--sp-3);">Still Have Questions?</h3>
+          <p style="font-size:var(--text-sm);margin-bottom:var(--sp-6);">Our team is happy to help. Reach out and we'll get back to you within 24 hours.</p>
+          <div style="display:flex;gap:var(--sp-3);justify-content:center;flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            <a href="support.html" class="btn btn-secondary">Support Center</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer id="footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><div class="footer-brand-logo"><div class="footer-brand-mark">N</div><span class="footer-brand-name">Nicholas Foundation</span></div><p class="footer-desc">A technology-first foundation for global impact.</p><div class="footer-socials"><a href="#" class="footer-social">𝕏</a><a href="#" class="footer-social">in</a></div><div class="footer-newsletter"><div class="footer-newsletter-title">Stay Updated</div><form class="footer-newsletter-form"><input type="email" class="footer-newsletter-input" placeholder="your@email.com" /><button type="submit" class="footer-newsletter-btn">Subscribe</button></form></div></div>
+  <div class="footer-col"><div class="footer-col-title">Company</div><nav class="footer-links"><a href="about.html" class="footer-link">About</a><a href="products.html" class="footer-link">Products</a><a href="careers.html" class="footer-link">Careers</a><a href="contact.html" class="footer-link">Contact</a></nav></div>
+  <div class="footer-col"><div class="footer-col-title">Resources</div><nav class="footer-links"><a href="support.html" class="footer-link">Support</a><a href="faq.html" class="footer-link">FAQ</a><a href="privacy.html" class="footer-link">Privacy</a></nav></div>
+  <div class="footer-col"><div class="footer-col-title">Email</div><div class="footer-contact-item"><div class="footer-contact-icon">✉</div><div style="font-size:var(--text-sm);color:var(--text-secondary);">hello@nicholasfoundation.org</div></div></div>
+</div><div class="footer-bottom"><p class="footer-copy">© <span id="footer-year"></span> The Nicholas Foundation.</p></div></div></footer>
+</div>
+<button id="back-to-top" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+<script>
+  document.getElementById('footer-year').textContent = document.getElementById('sidebar-year').textContent = new Date().getFullYear();
+
+  function showFAQCategory(cat) {
+    const btns = document.querySelectorAll('[onclick^="showFAQCategory"]');
+    btns.forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+    const items = document.querySelectorAll('.accordion-item[data-faq-category]');
+    const groups = { general: document.getElementById('faq-general'), technical: document.getElementById('faq-technical'), partnerships: document.getElementById('faq-partnerships'), licensing: document.getElementById('faq-licensing') };
+    items.forEach(item => {
+      item.style.display = (cat === 'all' || item.dataset.faqCategory === cat) ? '' : 'none';
+    });
+    Object.values(groups).forEach(g => { if (g) g.style.display = (cat === 'all' || g.id === 'faq-' + cat) ? '' : 'none'; });
+  }
+</script>
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/modal.js"></script>
+<!-- Cookie Consent -->
+<div id="cookie-consent" class="cookie-banner" role="dialog" aria-modal="true" aria-label="Cookie preferences" aria-live="polite">
+  <div class="cookie-text"><strong>🍪 We use minimal cookies</strong> to save your preferences and understand how our site is used. <a href="privacy.html#cookies" class="cookie-link">Learn more</a></div>
+  <div class="cookie-actions"><button id="cookie-reject" class="btn btn-sm btn-secondary">Essential Only</button><button id="cookie-accept" class="btn btn-sm btn-primary">Accept All</button></div>
+</div>
+<!-- Search Modal -->
+<div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Site search" tabindex="-1">
+  <div class="search-modal">
+    <div class="search-modal-header">
+      <div class="search-wrap" style="flex:1;"><span class="search-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></span><input type="search" id="search-field" class="search-input" placeholder="Search pages, topics, platforms…" autocomplete="off" aria-label="Search" /></div>
+      <button id="search-close" class="search-close-btn" aria-label="Close search">ESC</button>
+    </div>
+    <div id="search-results" class="search-results" aria-live="polite"></div>
+    <div class="search-footer"><span>Press <kbd>↑</kbd><kbd>↓</kbd> to navigate · <kbd>Enter</kbd> to open · <kbd>ESC</kbd> to close</span></div>
+  </div>
+</div>
+<div id="page-transition-overlay" aria-hidden="true"></div>
+<script src="js/enhancements.js"></script>
+</body>
+</html>
+
+
+
+

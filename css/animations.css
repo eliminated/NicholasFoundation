@@ -1,0 +1,322 @@
+/* =============================================================================
+   THE NICHOLAS FOUNDATION — Animations
+   animations.css — Keyframes, Scroll Reveal, Hover Effects, Micro-interactions
+   ============================================================================= */
+
+/* =============================================================================
+   1. Core Keyframes
+   ============================================================================= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(79,142,247,0.2); }
+  50%       { box-shadow: 0 0 40px rgba(79,142,247,0.5); }
+}
+
+@keyframes pulse-ring {
+  0%   { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-8px) rotate(1deg); }
+  66%       { transform: translateY(-4px) rotate(-1deg); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes scanline {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+}
+
+@keyframes noise {
+  0%, 100% { background-position: 0 0; }
+  10%       { background-position: -5% -10%; }
+  20%       { background-position: -15% 5%; }
+  30%       { background-position: 7% -25%; }
+  40%       { background-position: 20% 25%; }
+  50%       { background-position: -25% 10%; }
+  60%       { background-position: 15% 5%; }
+  70%       { background-position: 0 15%; }
+  80%       { background-position: 25% 35%; }
+  90%       { background-position: -10% 10%; }
+}
+
+/* Typing cursor */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* =============================================================================
+   2. Scroll Reveal Classes
+   ============================================================================= */
+
+/* Initial hidden state */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.reveal-up    { transform: translateY(40px); }
+.reveal.reveal-down  { transform: translateY(-25px); }
+.reveal.reveal-left  { transform: translateX(-40px); }
+.reveal.reveal-right { transform: translateX(40px); }
+.reveal.reveal-scale { transform: scale(0.92); }
+.reveal.reveal-fade  { /* opacity only */ }
+
+/* Revealed (visible) state */
+.reveal.in-view {
+  opacity: 1;
+  transform: none !important;
+}
+
+/* Stagger delays */
+.stagger-1 { transition-delay: 0.05s; }
+.stagger-2 { transition-delay: 0.12s; }
+.stagger-3 { transition-delay: 0.19s; }
+.stagger-4 { transition-delay: 0.26s; }
+.stagger-5 { transition-delay: 0.33s; }
+.stagger-6 { transition-delay: 0.40s; }
+
+/* =============================================================================
+   3. Utility Animation Classes
+   ============================================================================= */
+
+/* Float animation for decorative elements */
+.anim-float      { animation: float 6s ease-in-out infinite; }
+.anim-float-slow { animation: float-slow 8s ease-in-out infinite; }
+.anim-float-alt  { animation: float 6s ease-in-out infinite 2s; }
+
+/* Pulse glow on elements */
+.anim-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+
+/* Spin for loading or decorative circles */
+.anim-spin-slow { animation: spin-slow 12s linear infinite; }
+
+/* Shimmer text */
+.anim-shimmer-text {
+  background: linear-gradient(90deg, var(--accent) 0%, var(--purple-light) 25%, var(--accent) 50%, var(--purple-light) 75%, var(--accent) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* =============================================================================
+   4. Hero Typewriter Cursor
+   ============================================================================= */
+.typewriter-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: var(--accent);
+  margin-left: 3px;
+  vertical-align: middle;
+  border-radius: 1px;
+  animation: cursor-blink 0.9s ease-in-out infinite;
+}
+
+/* =============================================================================
+   5. Hero Section Animations
+   ============================================================================= */
+
+/* Hero entrance — applied on page load */
+.hero-headline   { animation: fadeInUp 0.9s ease both; animation-delay: 0.1s; }
+.hero-subline    { animation: fadeInUp 0.9s ease both; animation-delay: 0.3s; }
+.hero-tagline    { animation: fadeInUp 0.9s ease both; animation-delay: 0.2s; }
+.hero-cta        { animation: fadeInUp 0.9s ease both; animation-delay: 0.5s; }
+.hero-badge      { animation: fadeInDown 0.7s ease both; animation-delay: 0.05s; }
+.hero-stats      { animation: fadeIn 1s ease both; animation-delay: 0.8s; }
+
+/* =============================================================================
+   6. Hover Micro-interactions
+   ============================================================================= */
+
+/* Card lift */
+.hover-lift {
+  transition: transform var(--t-base), box-shadow var(--t-base);
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md), var(--shadow-glow-sm);
+}
+
+/* Link underline slide */
+.hover-underline { position: relative; }
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width var(--t-base);
+  border-radius: var(--r-full);
+}
+.hover-underline:hover::after { width: 100%; }
+
+/* Glow on hover */
+.hover-glow:hover { box-shadow: var(--shadow-glow); }
+
+/* Scale up */
+.hover-scale:hover { transform: scale(1.04); }
+
+/* Image zoom on hover */
+.img-zoom { overflow: hidden; }
+.img-zoom img {
+  transition: transform 0.6s ease;
+}
+.img-zoom:hover img { transform: scale(1.06); }
+
+/* =============================================================================
+   7. Decorative Animated Elements
+   ============================================================================= */
+
+/* Pulsing ring indicator */
+.pulse-ring {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: var(--r-full);
+  border: 2px solid var(--accent);
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+/* Orbiting dot */
+.orbit-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+.orbit-dot {
+  width: 10px; height: 10px;
+  border-radius: var(--r-full);
+  background: var(--accent);
+  position: absolute;
+  top: 50%; left: 50%;
+  margin: -5px;
+  animation: orbit 6s linear infinite;
+}
+.orbit-dot:nth-child(2) { animation-delay: -2s; background: var(--purple-light); }
+.orbit-dot:nth-child(3) { animation-delay: -4s; background: var(--cyan); }
+
+/* Glowing dot */
+.glow-dot {
+  width: 8px; height: 8px;
+  border-radius: var(--r-full);
+  background: var(--green);
+  display: inline-block;
+  box-shadow: 0 0 10px var(--green);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Divider with animated gradient */
+.divider-animated {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), var(--purple), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+
+/* =============================================================================
+   8. Page Transition Overlay
+   ============================================================================= */
+#page-transition {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-primary);
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#page-transition.active { opacity: 1; }
+
+/* =============================================================================
+   9. Reduced Motion Accessibility
+   ============================================================================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal { opacity: 1 !important; transform: none !important; }
+}

@@ -1,0 +1,2 @@
+# Netlify _redirects — serve custom 404 for any unmatched route
+/*    /404.html   404
