@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Research at The Nicholas Foundation — Explore our current AI research on the Nyx engine, a rule-based intelligent assistant built from scratch with a roadmap to full machine learning." />
+  <title>Research — The Nicholas Foundation</title>
+  <meta property="og:title" content="Research — The Nicholas Foundation" />
+  <meta property="og:description" content="Discover how we're building an AI assistant from the ground up — starting with a transparent, rule-based engine and growing toward full intelligence." />
+  <meta property="og:image" content="/assets/og-card.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="css/main.css" /><link rel="stylesheet" href="css/components.css" /><link rel="stylesheet" href="css/layout.css" /><link rel="stylesheet" href="css/animations.css" /><link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/enhancements.css" />
+  <link rel="stylesheet" href="css/cursor.css" />
+  <link rel="stylesheet" href="css/i18n.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234F8EF7'/><text y='72' x='50' font-size='60' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'>N</text></svg>" />
+</head>
+<body>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div id="scroll-progress"></div>
+<nav id="navbar" class="transparent" aria-label="Main navigation">
+  <div class="navbar-container">
+    <div class="navbar-left"><button id="hamburger" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+    <a href="index.html" class="navbar-logo"><div class="navbar-logo-mark">N</div><div class="navbar-logo-text"><span class="navbar-logo-name">Nicholas Foundation</span><span class="navbar-logo-tagline" data-i18n="nav.tagline">Engineering the Future</span></div></a>
+    <div class="navbar-right"><button id="search-btn" aria-label="Search (Ctrl+K)" title="Search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button><button id="theme-toggle" aria-label="Toggle theme"></button><button id="profile-btn" aria-label="Profile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button></div>
+  </div>
+</nav>
+<div id="sidebar-backdrop"></div>
+<aside id="sidebar" role="dialog" aria-label="Navigation" aria-modal="true">
+  <div class="sidebar-header"><div class="sidebar-logo"><div class="sidebar-logo-mark">N</div><span class="sidebar-logo-name">Nicholas Foundation</span></div><button id="sidebar-close" aria-label="Close">✕</button></div>
+  <nav class="sidebar-nav">
+    <div class="sidebar-nav-group"><div class="sidebar-nav-label">Main</div><a href="index.html" class="sidebar-nav-link"><span class="nav-icon">🏠</span> Home</a><a href="about.html" class="sidebar-nav-link"><span class="nav-icon">🔭</span> About Us</a><a href="products.html" class="sidebar-nav-link"><span class="nav-icon">⚡</span> Products &amp; Services</a><a href="research.html" class="sidebar-nav-link active"><span class="nav-icon">🔬</span> Research</a><a href="blog.html" class="sidebar-nav-link"><span class="nav-icon">📡</span> Blog</a></div>
+    <div class="sidebar-nav-group"><div class="sidebar-nav-label">Company</div><a href="careers.html" class="sidebar-nav-link"><span class="nav-icon">🚀</span> Careers</a><a href="contact.html" class="sidebar-nav-link"><span class="nav-icon">✉️</span> Contact Us</a><a href="support.html" class="sidebar-nav-link"><span class="nav-icon">🛡️</span> Support</a><a href="faq.html" class="sidebar-nav-link"><span class="nav-icon">💡</span> FAQ</a><a href="privacy.html" class="sidebar-nav-link"><span class="nav-icon">🔒</span> Privacy</a></div>
+  </nav>
+  <div class="sidebar-footer"><div class="sidebar-socials"><a href="#" class="sidebar-social-link">𝕏</a><a href="#" class="sidebar-social-link">in</a></div><p class="sidebar-copy">© <span id="sidebar-year"></span> The Nicholas Foundation</p></div>
+</aside>
+
+<div class="page-wrapper">
+<main id="main-content">
+
+  <!-- ===== HERO ===== -->
+  <section class="page-hero product-detail-hero" aria-labelledby="research-hero-h">
+    <div class="product-hero-accent product-hero-accent--research" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <span class="section-label">Research &amp; Development</span>
+      <span class="product-hero-icon" aria-hidden="true">🔬</span>
+      <h1 id="research-hero-h">Our <span class="grad-text--research">Research</span></h1>
+      <p class="product-hero-tagline">We believe in building intelligence from the ground up — understanding every decision the AI makes before moving to the next level. Here's what we're working on right now.</p>
+      <div style="display:flex;gap:var(--sp-4);justify-content:center;flex-wrap:wrap;">
+        <a href="#research-focus" class="btn btn-primary btn-lg">Current Focus</a>
+        <a href="#research-timeline" class="btn btn-secondary btn-lg">Our Roadmap</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CURRENT FOCUS: NYX AI ===== -->
+  <section class="section" id="research-focus" style="background:var(--bg-secondary);" aria-labelledby="research-focus-h">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-label">Active Research</span>
+        <h2 id="research-focus-h">Current Focus:<br><span class="grad-text--research">Nyx AI Engine</span></h2>
+      </div>
+
+      <div class="research-focus-card reveal reveal-up">
+        <div class="research-focus-header">
+          <div class="research-focus-icon">🧠</div>
+          <div>
+            <div class="research-focus-title">Building an AI Assistant from Scratch</div>
+            <div class="research-focus-badge"><span class="research-focus-badge-dot"></span> Active Development</div>
+          </div>
+        </div>
+        <div class="research-focus-body">
+          <p>Nyx is our in-house artificial intelligence project — an AI assistant being built entirely from scratch by The Nicholas Foundation. Rather than using existing AI services or wrapping someone else's technology, we're creating every layer of the system ourselves.</p>
+          <p>We deliberately started with a <strong>rule-based approach</strong>: the AI follows carefully written instructions to understand what you say and respond appropriately. Think of it like teaching a child step by step — first you teach them the rules of conversation, then over time they learn to think more independently.</p>
+          <p>This approach gives us deep insight into how people naturally interact with an AI. By observing real conversation patterns against our hand-crafted rules, we're building a strong foundation of knowledge that will guide us when we introduce more advanced learning capabilities in the future.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT NYX CAN DO TODAY ===== -->
+  <section class="section" aria-labelledby="research-capabilities-h">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-label">What It Can Do</span>
+        <h2 id="research-capabilities-h">Nyx Today:<br><span class="grad-text--research">Built-In Intelligence</span></h2>
+        <p>Even in its early rule-based stage, Nyx already has a surprising range of capabilities — all running privately on your own device.</p>
+      </div>
+
+      <div class="research-capability-grid">
+        <div class="research-capability-tile reveal reveal-up stagger-1">
+          <span class="research-capability-icon">💬</span>
+          <h4>Understands Conversations</h4>
+          <p>Nyx can recognize greetings, questions, and various topics of discussion. It carefully analyzes what you say and picks the most relevant response using an intelligent matching system.</p>
+        </div>
+        <div class="research-capability-tile reveal reveal-up stagger-2">
+          <span class="research-capability-icon">🧠</span>
+          <h4>Remembers You</h4>
+          <p>Tell Nyx your name, and it remembers. It keeps track of your past conversations and personal preferences — all stored privately on your own computer, never sent anywhere else.</p>
+        </div>
+        <div class="research-capability-tile reveal reveal-up stagger-3">
+          <span class="research-capability-icon">📋</span>
+          <h4>Keeps You Organized</h4>
+          <p>A full built-in organizer with notes, to-do lists, and timed reminders. Say something like "remind me tomorrow at 9am" and Nyx handles the rest — including desktop notifications when it's time.</p>
+        </div>
+        <div class="research-capability-tile reveal reveal-up stagger-1">
+          <span class="research-capability-icon">🛡️</span>
+          <h4>Prioritizes Safety</h4>
+          <p>Harmful requests are firmly declined. If you've been a victim of hacking or account compromise, Nyx provides clear, step-by-step recovery guidance to help you secure your accounts.</p>
+        </div>
+        <div class="research-capability-tile reveal reveal-up stagger-2">
+          <span class="research-capability-icon">📊</span>
+          <h4>Learns Your Habits</h4>
+          <p>Nyx quietly tracks how you interact — how many conversations you have, what times you're most active, and which features you use most. This data stays on your device and helps us improve the experience.</p>
+        </div>
+        <div class="research-capability-tile reveal reveal-up stagger-3">
+          <span class="research-capability-icon">🔒</span>
+          <h4>Works Completely Offline</h4>
+          <p>Everything runs on your own computer — no internet connection required, no cloud servers, no data leaving your device. Your conversations and personal information stay entirely private.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY RULES FIRST ===== -->
+  <section class="section" style="background:var(--bg-secondary);" aria-labelledby="research-rationale-h">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-label">Our Approach</span>
+        <h2 id="research-rationale-h">Why We Start<br><span class="grad-text--research">with Rules</span></h2>
+        <p>Most AI companies jump straight to complex machine learning. We chose a different, more deliberate path — and here's why.</p>
+      </div>
+
+      <div class="research-rationale-grid">
+        <div class="research-rationale-card reveal reveal-up stagger-1">
+          <div class="research-rationale-num">1</div>
+          <div class="research-rationale-text">
+            <h4>Full Transparency</h4>
+            <p>With a rule-based system, we know exactly why the AI said what it said. There's no "black box" — every response can be traced back to a specific decision. This makes the system predictable and trustworthy.</p>
+          </div>
+        </div>
+        <div class="research-rationale-card reveal reveal-up stagger-2">
+          <div class="research-rationale-num">2</div>
+          <div class="research-rationale-text">
+            <h4>Safety You Can Verify</h4>
+            <p>Because every rule is written explicitly, we can guarantee that harmful content is always blocked. There's no chance of the AI accidentally generating something inappropriate — safety is built into the architecture.</p>
+          </div>
+        </div>
+        <div class="research-rationale-card reveal reveal-up stagger-3">
+          <div class="research-rationale-num">3</div>
+          <div class="research-rationale-text">
+            <h4>Learning the Fundamentals</h4>
+            <p>Building from rules teaches us the foundations of AI interaction — how people phrase questions, what they expect from an assistant, and where the real challenges lie. This knowledge is invaluable for building smarter systems later.</p>
+          </div>
+        </div>
+        <div class="research-rationale-card reveal reveal-up stagger-4">
+          <div class="research-rationale-num">4</div>
+          <div class="research-rationale-text">
+            <h4>Observing Real Patterns</h4>
+            <p>Every conversation reveals how real people interact with AI. By starting with rules, we can carefully study these patterns and use them to train more advanced models — giving us a head start when we make the leap to machine learning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEVELOPMENT TIMELINE ===== -->
+  <section class="section" id="research-timeline" aria-labelledby="research-timeline-h">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-label">The Journey</span>
+        <h2 id="research-timeline-h">Development<br><span class="grad-text--research">Roadmap</span></h2>
+        <p>From hand-crafted rules to genuine artificial intelligence — a three-phase journey to build something truly competitive.</p>
+      </div>
+
+      <div class="research-phase-grid reveal reveal-up">
+        <div class="research-phase-card">
+          <div class="research-phase-dot research-phase-dot--active"></div>
+          <div class="research-phase-label">Phase 1</div>
+          <h4>Structured Intelligence</h4>
+          <p>Build a complete AI assistant powered by carefully crafted rules. Conversation understanding, personal memory, a full organizer with notes, tasks, and reminders, safety systems, and a polished desktop application.</p>
+          <span class="research-phase-status research-phase-status--current">✦ Current Stage</span>
+        </div>
+        <div class="research-phase-card">
+          <div class="research-phase-dot research-phase-dot--upcoming"></div>
+          <div class="research-phase-label">Phase 2</div>
+          <h4>Adaptive Learning</h4>
+          <p>Introduce lightweight learning capabilities. Nyx begins recognizing patterns in conversation, adapting to context, and understanding the emotion behind your words — while keeping the proven safety layer intact.</p>
+          <span class="research-phase-status research-phase-status--next">Up Next</span>
+        </div>
+        <div class="research-phase-card">
+          <div class="research-phase-dot research-phase-dot--upcoming"></div>
+          <div class="research-phase-label">Phase 3</div>
+          <h4>Full Intelligence</h4>
+          <p>Scale to a fully competitive AI assistant — capable of deep understanding, creative responses, and complex reasoning. The goal: match the quality and capability of the leading AI assistants available today.</p>
+          <span class="research-phase-status research-phase-status--vision">Long-Term Vision</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESEARCH PRINCIPLES ===== -->
+  <section class="section" style="background:var(--bg-secondary);" aria-labelledby="research-principles-h">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-label">What Guides Us</span>
+        <h2 id="research-principles-h">Research<br><span class="grad-text--research">Principles</span></h2>
+      </div>
+
+      <div class="research-principles-grid">
+        <div class="research-principle-card reveal reveal-up stagger-1">
+          <div class="research-principle-icon">🔒</div>
+          <h4>Privacy First</h4>
+          <p>All data stays on your device. No cloud uploads, no tracking, no data harvesting. Your conversations are yours alone.</p>
+        </div>
+        <div class="research-principle-card reveal reveal-up stagger-2">
+          <div class="research-principle-icon">🛡️</div>
+          <h4>Safety by Design</h4>
+          <p>Safety isn't an afterthought — it's woven into the core architecture. The AI is built to be helpful and refuse harm, always.</p>
+        </div>
+        <div class="research-principle-card reveal reveal-up stagger-3">
+          <div class="research-principle-icon">🔍</div>
+          <h4>Transparent &amp; Explainable</h4>
+          <p>Every decision the AI makes can be understood and audited. No hidden logic, no unexplainable behavior.</p>
+        </div>
+        <div class="research-principle-card reveal reveal-up stagger-4">
+          <div class="research-principle-icon">🏗️</div>
+          <h4>Built from Scratch</h4>
+          <p>We don't wrap existing services. Every component is engineered in-house, giving us full control over quality and direction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="breadcrumb-wrap"><div class="container"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html" class="breadcrumb-link">Home</a><span class="breadcrumb-sep" aria-hidden="true">/</span><span class="breadcrumb-current" aria-current="page">Research</span></nav></div></div>
+
+  <!-- ===== CTA ===== -->
+  <section id="cta-banner"><div class="container"><div class="cta-inner reveal reveal-up">
+    <h2>Follow Our<br>Research Journey</h2>
+    <p>We're building AI the right way — from the ground up, with transparency and safety at every step. Stay updated or get in touch to learn more.</p>
+    <div class="btn-group"><a href="contact.html" class="btn-white">Get in Touch</a><a href="product-nyx.html" class="btn-outline-white">Learn About Nyx AI</a></div>
+  </div></div></section>
+
+</main>
+<footer id="footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><div class="footer-brand-logo"><div class="footer-brand-mark">N</div><span class="footer-brand-name">Nicholas Foundation</span></div><p class="footer-desc">A technology-first foundation building innovative systems for global impact.</p><div class="footer-socials"><a href="#" class="footer-social">𝕏</a><a href="#" class="footer-social">in</a></div><div class="footer-newsletter"><div class="footer-newsletter-title">Stay Updated</div><form class="footer-newsletter-form"><input type="email" class="footer-newsletter-input" placeholder="your@email.com" /><button type="submit" class="footer-newsletter-btn">Subscribe</button></form></div></div>
+  <div class="footer-col"><div class="footer-col-title">Company</div><nav class="footer-links"><a href="about.html" class="footer-link">About Us</a><a href="products.html" class="footer-link">Products</a><a href="research.html" class="footer-link">Research</a><a href="blog.html" class="footer-link">Blog</a><a href="careers.html" class="footer-link">Careers</a><a href="contact.html" class="footer-link">Contact</a></nav></div>
+  <div class="footer-col"><div class="footer-col-title">Products</div><nav class="footer-links"><a href="product-trux.html" class="footer-link">TruXSocial</a><a href="product-datex.html" class="footer-link">DateX Sheet</a><a href="product-nerd.html" class="footer-link">Nerd Companion</a><a href="product-nyx.html" class="footer-link">Nyx AI</a></nav></div>
+  <div class="footer-col"><div class="footer-col-title">Resources</div><nav class="footer-links"><a href="support.html" class="footer-link">Support</a><a href="faq.html" class="footer-link">FAQ</a><a href="#" class="footer-link">Docs</a></nav></div>
+</div><div class="footer-bottom"><p class="footer-copy">© <span id="footer-year"></span> The Nicholas Foundation.</p><div class="footer-bottom-links"><a href="privacy.html" class="footer-bottom-link">Privacy Policy</a><a href="privacy.html" class="footer-bottom-link">Terms of Service</a></div></div></div></footer>
+</div>
+<button id="back-to-top" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+<script>document.getElementById('footer-year').textContent=document.getElementById('sidebar-year').textContent=new Date().getFullYear();</script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="js/main.js?v=3"></script>
+<script src="js/animations.js"></script>
+<script src="js/modal.js?v=3"></script>
+<script src="js/cursor.js?v=1"></script>
+<script src="js/i18n.js?v=1"></script>
+<div id="cookie-consent" class="cookie-banner" role="dialog" aria-modal="true" aria-label="Cookie preferences" aria-live="polite">
+  <div class="cookie-text"><strong>🍪 We use minimal cookies</strong> <span>to save your preferences and understand how our site is used.</span> <a href="privacy.html#cookies" class="cookie-link">Learn more</a></div>
+  <div class="cookie-actions"><button id="cookie-reject" class="btn btn-sm btn-secondary">Essential Only</button><button id="cookie-accept" class="btn btn-sm btn-primary">Accept All</button></div>
+</div>
+<!-- Search Modal -->
+<div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Site search" tabindex="-1">
+  <div class="search-modal">
+    <div class="search-modal-header">
+      <div class="search-wrap" style="flex:1;"><span class="search-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></span><input type="search" id="search-field" class="search-input" placeholder="Search pages, topics, platforms…" autocomplete="off" aria-label="Search" /></div>
+      <button id="search-close" class="search-close-btn" aria-label="Close search">ESC</button>
+    </div>
+    <div id="search-results" class="search-results" aria-live="polite"></div>
+    <div class="search-footer"><span>Press <kbd>↑</kbd><kbd>↓</kbd> to navigate · <kbd>Enter</kbd> to open · <kbd>ESC</kbd> to close</span></div>
+  </div>
+</div>
+<div id="page-transition-overlay" aria-hidden="true"></div>
+<script src="js/enhancements.js?v=3"></script>
+</body>
+</html>

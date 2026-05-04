@@ -198,6 +198,13 @@ const GlobalSearch = (() => {
       icon: '📡',
     },
     {
+      title: 'Research',
+      url: 'research.html',
+      desc: 'Our AI research — building the Nyx AI engine from scratch, starting with a rule-based approach and evolving toward full machine learning.',
+      tags: ['research', 'nyx', 'ai', 'artificial intelligence', 'rule-based', 'machine learning', 'engine', 'safety', 'memory', 'organizer'],
+      icon: '🔬',
+    },
+    {
       title: 'Privacy & Terms',
       url: 'privacy.html',
       desc: 'Privacy policy, terms of service, data rights, cookies, and acceptable use.',
