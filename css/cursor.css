@@ -1,0 +1,145 @@
+/* =============================================================================
+   THE NICHOLAS FOUNDATION — Custom Cursor
+   cursor.css — GSAP-powered dual-ring cursor with magnetic + blend effects
+   ============================================================================= */
+
+/* ── Base Cursor Elements ──────────────────────────────────── */
+#cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s cubic-bezier(0.34,1.56,0.64,1),
+              height 0.3s cubic-bezier(0.34,1.56,0.64,1),
+              background 0.3s ease,
+              opacity 0.3s ease;
+  mix-blend-mode: difference;
+  will-change: transform;
+  opacity: 0; /* hidden until mouse moves */
+}
+
+#cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid rgba(79, 142, 247, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              height 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              border-color 0.3s ease,
+              border-width 0.3s ease,
+              background 0.3s ease,
+              opacity 0.3s ease;
+  will-change: transform;
+  opacity: 0; /* hidden until mouse moves */
+}
+
+/* ── Hide system cursor on desktop ─────────────────────────── */
+@media (pointer: fine) {
+  html.cursor-ready,
+  html.cursor-ready * {
+    cursor: none !important;
+  }
+}
+
+/* ── Hover State: Links, Buttons ───────────────────────────── */
+#cursor-dot.cursor-hover {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+}
+
+#cursor-ring.cursor-hover {
+  width: 64px;
+  height: 64px;
+  border-color: rgba(79, 142, 247, 0.8);
+  border-width: 2px;
+  background: rgba(79, 142, 247, 0.06);
+}
+
+/* ── Text Hover State ──────────────────────────────────────── */
+#cursor-dot.cursor-text {
+  width: 3px;
+  height: 28px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+#cursor-ring.cursor-text {
+  width: 48px;
+  height: 48px;
+  border-color: transparent;
+  background: rgba(79, 142, 247, 0.04);
+}
+
+/* ── Click State ───────────────────────────────────────────── */
+#cursor-dot.cursor-click {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+}
+
+#cursor-ring.cursor-click {
+  width: 32px;
+  height: 32px;
+  border-color: rgba(79, 142, 247, 1);
+  border-width: 3px;
+}
+
+/* ── Hidden State (when over iframes, inputs, etc.) ────────── */
+#cursor-dot.cursor-hidden,
+#cursor-ring.cursor-hidden {
+  opacity: 0 !important;
+}
+
+/* ── Visible once mouse moves ──────────────────────────────── */
+#cursor-dot.cursor-visible,
+#cursor-ring.cursor-visible {
+  opacity: 1;
+}
+
+/* ── Light Theme Adjustments ───────────────────────────────── */
+[data-theme="light"] #cursor-dot {
+  mix-blend-mode: normal;
+  background: var(--accent-dark);
+}
+
+[data-theme="light"] #cursor-ring {
+  border-color: rgba(45, 112, 219, 0.4);
+}
+
+[data-theme="light"] #cursor-ring.cursor-hover {
+  border-color: rgba(45, 112, 219, 0.7);
+  background: rgba(45, 112, 219, 0.06);
+}
+
+[data-theme="light"] #cursor-dot.cursor-hover {
+  background: var(--accent-dark);
+}
+
+/* ── Disable entirely on touch devices ─────────────────────── */
+@media (pointer: coarse), (hover: none) {
+  #cursor-dot,
+  #cursor-ring {
+    display: none !important;
+  }
+}
+
+/* ── Reduced motion preference ─────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  #cursor-dot,
+  #cursor-ring {
+    display: none !important;
+  }
+}

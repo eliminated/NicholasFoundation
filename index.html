@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The Nicholas Foundation — A technology-first foundation building innovative systems that drive global impact. Explore our mission, products, and partnerships." />
-  <meta name="keywords" content="Nicholas Foundation, TNF, technology, innovation, global impact, open source, AI, blockchain" />
+  <meta name="description"
+    content="The Nicholas Foundation — A technology-first foundation building innovative systems that drive global impact. Explore our mission, products, and partnerships." />
+  <meta name="keywords"
+    content="Nicholas Foundation, TNF, technology, innovation, global impact, open source, AI, blockchain" />
   <meta property="og:title" content="The Nicholas Foundation — Engineering the Future" />
-  <meta property="og:description" content="We build cutting-edge technology systems that solve humanity's greatest challenges at global scale." />
+  <meta property="og:description"
+    content="We build cutting-edge technology systems that solve humanity's greatest challenges at global scale." />
   <meta property="og:type" content="website" />
   <title>The Nicholas Foundation — Engineering the Future</title>
 
@@ -17,15 +21,19 @@
   <link rel="stylesheet" href="css/animations.css" />
   <link rel="stylesheet" href="css/pages.css" />
   <link rel="stylesheet" href="css/enhancements.css" />
+  <link rel="stylesheet" href="css/cursor.css" />
+  <link rel="stylesheet" href="css/i18n.css" />
   <!-- Open Graph -->
   <meta property="og:title" content="The Nicholas Foundation — Engineering the Future" />
-  <meta property="og:description" content="A technology-first foundation building open-source systems that drive global impact across 48+ countries." />
+  <meta property="og:description"
+    content="A technology-first foundation building open-source systems that drive global impact across 48+ countries." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nicholasfoundation.org/" />
   <meta property="og:image" content="https://nicholasfoundation.org/assets/og-card.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The Nicholas Foundation — Engineering the Future" />
-  <meta name="twitter:description" content="Open-source technology for global impact. AI, blockchain, and connectivity platforms deployed in 48+ countries." />
+  <meta name="twitter:description"
+    content="Open-source technology for global impact. AI, blockchain, and connectivity platforms deployed in 48+ countries." />
   <!-- Schema.org: Organization -->
   <script type="application/ld+json">
   {
@@ -41,579 +49,673 @@
   </script>
 
   <!-- Favicon placeholder -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234F8EF7'/><text y='72' x='50' font-size='60' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'>N</text></svg>" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234F8EF7'/><text y='72' x='50' font-size='60' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'>N</text></svg>" />
 </head>
+
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
 
-<!-- Scroll Progress Bar -->
-<div id="scroll-progress" role="progressbar" aria-label="Page scroll progress"></div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<!-- ===== NAVBAR ===== -->
-<nav id="navbar" class="transparent" aria-label="Main navigation">
-  <div class="navbar-container">
-    <!-- Left: Hamburger -->
-    <div class="navbar-left">
-      <button id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" role="progressbar" aria-label="Page scroll progress"></div>
 
-    <!-- Center: Logo -->
-    <a href="index.html" class="navbar-logo" aria-label="The Nicholas Foundation home">
-      <div class="navbar-logo-mark" aria-hidden="true">N</div>
-      <div class="navbar-logo-text">
-        <span class="navbar-logo-name">Nicholas Foundation</span>
-        <span class="navbar-logo-tagline">Engineering the Future</span>
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="transparent" aria-label="Main navigation">
+    <div class="navbar-container">
+      <!-- Left: Hamburger -->
+      <div class="navbar-left">
+        <button id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </a>
 
-    <div class="navbar-right">
-      <button id="search-btn" aria-label="Search (Ctrl+K)" title="Search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button>
-      <button id="theme-toggle" aria-label="Switch to light mode" title="Toggle theme"></button></button>
-      <button id="profile-btn" aria-label="User profile" title="Profile">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-      </button>
-    </div>
-  </div>
-</nav>
+      <!-- Center: Logo -->
+      <a href="index.html" class="navbar-logo" aria-label="The Nicholas Foundation home">
+        <div class="navbar-logo-mark" aria-hidden="true">N</div>
+        <div class="navbar-logo-text">
+          <span class="navbar-logo-name">Nicholas Foundation</span>
+          <span class="navbar-logo-tagline" data-i18n="nav.tagline">Engineering the Future</span>
+        </div>
+      </a>
 
-<!-- ===== SIDEBAR ===== -->
-<div id="sidebar-backdrop" aria-hidden="true"></div>
-<aside id="sidebar" role="dialog" aria-label="Navigation menu" aria-modal="true">
-  <div class="sidebar-header">
-    <div class="sidebar-logo">
-      <div class="sidebar-logo-mark" aria-hidden="true">N</div>
-      <span class="sidebar-logo-name">Nicholas Foundation</span>
-    </div>
-    <button id="sidebar-close" aria-label="Close navigation menu">✕</button>
-  </div>
-
-  <nav class="sidebar-nav" aria-label="Site navigation">
-    <div class="sidebar-nav-group">
-      <div class="sidebar-nav-label">Main</div>
-      <a href="index.html"    class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">🏠</span> Home</a>
-      <a href="about.html"    class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">🔭</span> About Us</a>
-      <a href="products.html" class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">⚡</span> Products &amp; Services</a>
-      <a href="blog.html"     class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">📡</span> Blog</a>
-    </div>
-    <div class="sidebar-nav-group">
-      <div class="sidebar-nav-label">Company</div>
-      <a href="careers.html"  class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">🚀</span> Careers</a>
-      <a href="contact.html"  class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">✉️</span> Contact Us</a>
-      <a href="support.html"  class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">🛡️</span> Support</a>
-      <a href="faq.html"      class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">💡</span> FAQ</a>
-      <a href="privacy.html"  class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">🔒</span> Privacy &amp; Terms</a>
+      <div class="navbar-right">
+        <button id="search-btn" aria-label="Search (Ctrl+K)" title="Search"><svg width="16" height="16"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.35-4.35" />
+          </svg></button>
+        <div class="lang-switcher-mount"></div>
+        <button id="theme-toggle" aria-label="Switch to light mode" title="Toggle theme"></button></button>
+        <button id="profile-btn" aria-label="User profile" title="Profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        </button>
+      </div>
     </div>
   </nav>
 
-  <div class="sidebar-footer">
-    <div class="sidebar-socials">
-      <a href="#" class="sidebar-social-link" aria-label="Twitter / X">𝕏</a>
-      <a href="#" class="sidebar-social-link" aria-label="LinkedIn">in</a>
-      <a href="#" class="sidebar-social-link" aria-label="GitHub">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.73-4.04-1.6-4.04-1.6-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.25 2.88.12 3.18.77.84 1.24 1.9 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.3c0 .32.22.69.82.57C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
-      </a>
-      <a href="#" class="sidebar-social-link" aria-label="YouTube">▶</a>
-    </div>
-    <p class="sidebar-copy">© <span id="sidebar-year"></span> The Nicholas Foundation</p>
-  </div>
-</aside>
-
-<!-- ===== PAGE WRAPPER ===== -->
-<div class="page-wrapper">
-<!-- Announcement Banner -->
-<div id="announcement-banner" class="announcement-banner" role="alert">
-  <div class="announcement-content"><span class="announcement-icon">🚀</span><span>FedCore v3 is now live — <a href="products.html#ai" class="announcement-link">See what's new →</a></span></div>
-  <button class="announcement-close" id="close-announcement" aria-label="Dismiss">✕</button>
-</div>
-
-<main id="main-content">
-
-  <!-- ===== HERO ===== -->
-  <section id="hero" aria-label="Hero">
-    <canvas id="particle-canvas" aria-hidden="true"></canvas>
-    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
-    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
-    <div class="hero-grid"            aria-hidden="true"></div>
-
-    <div class="hero-content">
-      <div class="hero-badge hero-badge" aria-label="Status: Active">
-        <span class="hero-badge-dot" aria-hidden="true"></span>
-        Technology for Humanity
+  <!-- ===== SIDEBAR ===== -->
+  <div id="sidebar-backdrop" aria-hidden="true"></div>
+  <aside id="sidebar" role="dialog" aria-label="Navigation menu" aria-modal="true">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-mark" aria-hidden="true">N</div>
+        <span class="sidebar-logo-name">Nicholas Foundation</span>
       </div>
+      <button id="sidebar-close" aria-label="Close navigation menu">✕</button>
+    </div>
 
-      <h1 class="hero-title">
-        <span class="hero-tagline">Engineering the Future of</span>
-        <span class="hero-typewriter-line hero-headline" aria-live="polite">
-          <span id="typewriter-text">Innovative Systems</span><span class="typewriter-cursor" aria-hidden="true"></span>
-        </span>
-      </h1>
+    <nav class="sidebar-nav" aria-label="Site navigation">
+      <div class="sidebar-nav-group">
+        <div class="sidebar-nav-label" data-i18n="sidebar.main">Main</div>
+        <a href="index.html" class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">🏠</span> <span
+            data-i18n="sidebar.home">Home</span></a>
+        <a href="about.html" class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">🔭</span> <span
+            data-i18n="sidebar.about">About Us</span></a>
+        <a href="products.html" class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">⚡</span> <span
+            data-i18n="sidebar.products">Products &amp; Services</span></a>
+        <a href="blog.html" class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">📡</span> <span
+            data-i18n="sidebar.blog">Blog</span></a>
+      </div>
+      <div class="sidebar-nav-group">
+        <div class="sidebar-nav-label" data-i18n="sidebar.company">Company</div>
+        <a href="careers.html" class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">🚀</span> <span
+            data-i18n="sidebar.careers">Careers</span></a>
+        <a href="contact.html" class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">✉️</span> <span
+            data-i18n="sidebar.contact">Contact Us</span></a>
+        <a href="support.html" class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">🛡️</span> <span
+            data-i18n="sidebar.support">Support</span></a>
+        <a href="faq.html" class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">💡</span> <span
+            data-i18n="sidebar.faq">FAQ</span></a>
+        <a href="privacy.html" class="sidebar-nav-link"><span class="nav-icon" aria-hidden="true">🔒</span> <span
+            data-i18n="sidebar.privacy">Privacy &amp; Terms</span></a>
+      </div>
+    </nav>
 
-      <p class="hero-subtitle hero-subline">
-        We build cutting-edge technology systems that solve humanity's greatest challenges at global scale — from open-source infrastructure to AI-powered platforms.
-      </p>
-
-      <div class="hero-cta">
-        <a href="products.html" class="btn btn-primary btn-lg" id="hero-explore-btn">
-          Explore Our Work
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    <div class="sidebar-footer">
+      <div class="sidebar-socials">
+        <a href="#" class="sidebar-social-link" aria-label="Twitter / X">𝕏</a>
+        <a href="#" class="sidebar-social-link" aria-label="LinkedIn">in</a>
+        <a href="#" class="sidebar-social-link" aria-label="GitHub">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.73-4.04-1.6-4.04-1.6-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.25 2.88.12 3.18.77.84 1.24 1.9 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.3c0 .32.22.69.82.57C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z" />
+          </svg>
         </a>
-        <a href="about.html" class="btn btn-secondary btn-lg" id="hero-about-btn">Our Mission</a>
+        <a href="#" class="sidebar-social-link" aria-label="YouTube">▶</a>
       </div>
+      <p class="sidebar-copy">© <span id="sidebar-year"></span> The Nicholas Foundation</p>
+    </div>
+  </aside>
 
-      <!-- Hero stats preview -->
-      <div class="hero-stats" style="display:flex;gap:2rem;justify-content:center;align-items:center;flex-wrap:wrap;">
-        <div style="text-align:center;">
-          <div class="grad-text" style="font-family:var(--font-display);font-size:1.75rem;font-weight:800;line-height:1;">
-            <span data-counter="48" data-suffix="+">0+</span>
-          </div>
-          <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;">Countries Reached</div>
-        </div>
-        <div style="width:1px;height:40px;background:var(--border);"></div>
-        <div style="text-align:center;">
-          <div class="grad-text" style="font-family:var(--font-display);font-size:1.75rem;font-weight:800;line-height:1;">
-            <span data-counter="120" data-suffix="M+">0</span>
-          </div>
-          <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;">Lives Impacted</div>
-        </div>
-        <div style="width:1px;height:40px;background:var(--border);"></div>
-        <div style="text-align:center;">
-          <div class="grad-text" style="font-family:var(--font-display);font-size:1.75rem;font-weight:800;line-height:1;">
-            <span data-counter="350" data-suffix="+">0+</span>
-          </div>
-          <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;">Open-Source Projects</div>
-        </div>
-        <div style="width:1px;height:40px;background:var(--border);"></div>
-        <div style="text-align:center;">
-          <div class="grad-text" style="font-family:var(--font-display);font-size:1.75rem;font-weight:800;line-height:1;">
-            <span data-counter="2.4" data-suffix="B+">0</span>
-          </div>
-          <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;">API Calls / Year</div>
-        </div>
-      </div>
+  <!-- ===== PAGE WRAPPER ===== -->
+  <div class="page-wrapper">
+    <!-- Announcement Banner -->
+    <div id="announcement-banner" class="announcement-banner" role="alert">
+      <div class="announcement-content"><span class="announcement-icon">🚀</span><span>The Nicholas Foundation — Engineering innovative technology for a better tomorrow. <a href="about.html" class="announcement-link">Learn more →</a></span></div>
+      <button class="announcement-close" id="close-announcement" aria-label="Dismiss">✕</button>
     </div>
 
-    <!-- Scroll indicator -->
-    <div class="hero-scroll-indicator" aria-hidden="true">
-      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
-      <span>Scroll</span>
-    </div>
-  </section>
+    <main id="main-content">
 
-  <!-- ===== MISSION ===== -->
-  <section class="section" id="mission" aria-labelledby="mission-heading">
-    <div class="container">
-      <div class="mission-split">
-        <div class="mission-visual reveal reveal-left" aria-hidden="true">
-          <div class="mission-orb mission-orb-1"></div>
-          <div class="mission-orb mission-orb-2"></div>
-          <div class="mission-sphere">🌐</div>
+      <!-- ===== HERO ===== -->
+      <section id="hero" aria-label="Hero">
+        <canvas id="particle-canvas" aria-hidden="true"></canvas>
+        <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+        <div class="hero-grid" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <div class="hero-badge hero-badge" aria-label="Status: Active">
+            <span class="hero-badge-dot" aria-hidden="true"></span>
+            <span data-i18n="hero.badge">Technology for Humanity</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-tagline" data-i18n="hero.tagline">Engineering the Future of</span>
+            <span class="hero-typewriter-line hero-headline" aria-live="polite">
+              <span id="typewriter-text">Innovative Systems</span><span class="typewriter-cursor"
+                aria-hidden="true"></span>
+            </span>
+          </h1>
+
+          <p class="hero-subtitle hero-subline" data-i18n="hero.subtitle">
+            We build cutting-edge technology systems that solve humanity's greatest challenges at global scale — from
+            open-source infrastructure to AI-powered platforms.
+          </p>
+
+          <div class="hero-cta">
+            <a href="products.html" class="btn btn-primary btn-lg" id="hero-explore-btn">
+              <span data-i18n="hero.cta.explore">Explore Our Work</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="about.html" class="btn btn-secondary btn-lg" id="hero-about-btn" data-i18n="hero.cta.mission">Our
+              Mission</a>
+          </div>
+
+          <!-- Hero stats preview -->
+          <div class="hero-stats"
+            style="display:flex;gap:2rem;justify-content:center;align-items:center;flex-wrap:wrap;">
+            <div style="text-align:center;">
+              <div class="grad-text"
+                style="font-family:var(--font-display);font-size:1.75rem;font-weight:800;line-height:1;">
+                <span data-counter="48" data-suffix="+">0+</span>
+              </div>
+              <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;" data-i18n="hero.stat.countries">
+                Countries Reached</div>
+            </div>
+            <div style="width:1px;height:40px;background:var(--border);"></div>
+            <div style="text-align:center;">
+              <div class="grad-text"
+                style="font-family:var(--font-display);font-size:1.75rem;font-weight:800;line-height:1;">
+                <span data-counter="120" data-suffix="M+">0</span>
+              </div>
+              <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;" data-i18n="hero.stat.lives">Lives
+                Impacted</div>
+            </div>
+            <div style="width:1px;height:40px;background:var(--border);"></div>
+            <div style="text-align:center;">
+              <div class="grad-text"
+                style="font-family:var(--font-display);font-size:1.75rem;font-weight:800;line-height:1;">
+                <span data-counter="350" data-suffix="+">0+</span>
+              </div>
+              <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;" data-i18n="hero.stat.projects">
+                Open-Source Projects</div>
+            </div>
+            <div style="width:1px;height:40px;background:var(--border);"></div>
+            <div style="text-align:center;">
+              <div class="grad-text"
+                style="font-family:var(--font-display);font-size:1.75rem;font-weight:800;line-height:1;">
+                <span data-counter="2.4" data-suffix="B+">0</span>
+              </div>
+              <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;" data-i18n="hero.stat.api">API Calls
+                / Year</div>
+            </div>
+          </div>
         </div>
-        <div class="mission-text reveal reveal-right">
-          <span class="section-label">Our Mission</span>
-          <h2 id="mission-heading">Technology as a<br><span class="grad-text">Force for Good</span></h2>
-          <p>The Nicholas Foundation exists to harness technology's full potential in service of humanity. We design, build, and deploy open systems — infrastructure, platforms, and toolkits — that empower communities, governments, and innovators worldwide.</p>
-          <div class="mission-pillars">
-            <div class="mission-pillar">
-              <div class="mission-pillar-icon">🔬</div>
-              <div class="mission-pillar-text">
-                <div class="mission-pillar-title">Research-Driven</div>
-                <div class="mission-pillar-desc">Every system we build is grounded in rigorous research and real-world validation.</div>
+
+        <!-- Scroll indicator -->
+        <div class="hero-scroll-indicator" aria-hidden="true">
+          <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+          </div>
+          <span data-i18n="scroll.indicator">Scroll</span>
+        </div>
+      </section>
+
+      <!-- ===== MISSION ===== -->
+      <section class="section" id="mission" aria-labelledby="mission-heading">
+        <div class="container">
+          <div class="mission-split">
+            <div class="mission-visual reveal reveal-left" aria-hidden="true">
+              <div class="mission-orb mission-orb-1"></div>
+              <div class="mission-orb mission-orb-2"></div>
+              <div id="globe-container" style="display:none;"></div>
+              <div id="globe-fallback" class="mission-sphere">🌐</div>
+            </div>
+            <div class="mission-text reveal reveal-right">
+              <span class="section-label" data-i18n="section.mission">Our Mission</span>
+              <h2 id="mission-heading"><span data-i18n="section.mission.title.1">Technology as a</span><br><span
+                  class="grad-text" data-i18n="section.mission.title.2">Force for Good</span></h2>
+              <p>The Nicholas Foundation exists to harness technology's full potential in service of humanity. We
+                design, build, and deploy open systems — infrastructure, platforms, and toolkits — that empower
+                communities, governments, and innovators worldwide.</p>
+              <div class="mission-pillars">
+                <div class="mission-pillar">
+                  <div class="mission-pillar-icon">🔬</div>
+                  <div class="mission-pillar-text">
+                    <div class="mission-pillar-title">Research-Driven</div>
+                    <div class="mission-pillar-desc">Every system we build is grounded in rigorous research and
+                      real-world validation.</div>
+                  </div>
+                </div>
+                <div class="mission-pillar">
+                  <div class="mission-pillar-icon">🌍</div>
+                  <div class="mission-pillar-text">
+                    <div class="mission-pillar-title">Global by Default</div>
+                    <div class="mission-pillar-desc">We design for scale from day one — supporting 100+ languages and
+                      48+ countries.</div>
+                  </div>
+                </div>
+                <div class="mission-pillar">
+                  <div class="mission-pillar-icon">🔓</div>
+                  <div class="mission-pillar-text">
+                    <div class="mission-pillar-title">Open & Transparent</div>
+                    <div class="mission-pillar-desc">Our code, data, and methodologies are open-source and publicly
+                      auditable.</div>
+                  </div>
+                </div>
+              </div>
+              <div style="margin-top:var(--sp-8);">
+                <a href="about.html" class="btn btn-primary" id="mission-learn-btn">Learn About TNF <span
+                    class="btn-arrow">→</span></a>
               </div>
             </div>
-            <div class="mission-pillar">
-              <div class="mission-pillar-icon">🌍</div>
-              <div class="mission-pillar-text">
-                <div class="mission-pillar-title">Global by Default</div>
-                <div class="mission-pillar-desc">We design for scale from day one — supporting 100+ languages and 48+ countries.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PRODUCTS PREVIEW ===== -->
+      <section class="section" id="services-preview" aria-labelledby="services-heading">
+        <div class="container">
+          <div class="section-header reveal reveal-up">
+            <span class="section-label" data-i18n="section.whatwebuild">What We Build</span>
+            <h2 id="services-heading"><span data-i18n="section.whatwebuild.title.1">Products That</span><br><span
+                class="grad-text" data-i18n="section.whatwebuild.title.2">Power Tomorrow</span></h2>
+            <p>Three flagship products spanning social media, productivity, and education — built with cutting-edge technology and designed to make a difference.</p>
+          </div>
+          <div class="services-grid">
+            <div class="card-feature reveal reveal-up stagger-1">
+              <div class="card-icon card-icon-gold" aria-hidden="true">💬</div>
+              <h4>TruXSocial</h4>
+              <p>A security-first social media platform with discovery feeds, real-time messaging, moderation tools, and a refined command-shell UI — built on PHP + Node.js coexistence.</p>
+              <div style="margin-top:var(--sp-5);">
+                <a href="product-trux.html" class="btn-ghost btn">Learn more <span class="btn-arrow">→</span></a>
               </div>
             </div>
-            <div class="mission-pillar">
-              <div class="mission-pillar-icon">🔓</div>
-              <div class="mission-pillar-text">
-                <div class="mission-pillar-title">Open & Transparent</div>
-                <div class="mission-pillar-desc">Our code, data, and methodologies are open-source and publicly auditable.</div>
+            <div class="card-feature reveal reveal-up stagger-2">
+              <div class="card-icon card-icon-blue" aria-hidden="true">📊</div>
+              <h4>DateX Sheet</h4>
+              <p>A modern spreadsheet powered by a Rust engine compiled to WebAssembly. Canvas grid at 60fps, sub-millisecond recalculation, and cross-platform via Tauri 2.</p>
+              <div style="margin-top:var(--sp-5);">
+                <a href="product-datex.html" class="btn-ghost btn">Learn more <span class="btn-arrow">→</span></a>
+              </div>
+            </div>
+            <div class="card-feature reveal reveal-up stagger-3">
+              <div class="card-icon card-icon-green" aria-hidden="true">📚</div>
+              <h4>Nerd Companion</h4>
+              <p>A dedicated study app with Pomodoro timers, intelligent day-load scoring, smart scheduling, journaling, and a gamified Nerd Score + streak system.</p>
+              <div style="margin-top:var(--sp-5);">
+                <a href="product-nerd.html" class="btn-ghost btn">Learn more <span class="btn-arrow">→</span></a>
               </div>
             </div>
           </div>
-          <div style="margin-top:var(--sp-8);">
-            <a href="about.html" class="btn btn-primary" id="mission-learn-btn">Learn About TNF <span class="btn-arrow">→</span></a>
+          <div class="text-center" style="margin-top:var(--sp-12);">
+            <a href="products.html" class="btn btn-secondary btn-lg" id="view-all-products-btn"
+              data-i18n="btn.viewall">View All Products &amp; Services</a>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- ===== SERVICES PREVIEW ===== -->
-  <section class="section" id="services-preview" aria-labelledby="services-heading">
-    <div class="container">
-      <div class="section-header reveal reveal-up">
-        <span class="section-label">What We Build</span>
-        <h2 id="services-heading">Systems That<br><span class="grad-text">Power Tomorrow</span></h2>
-        <p>From AI infrastructure to decentralized networks, our products are used by millions of developers, researchers, and organizations globally.</p>
-      </div>
-      <div class="services-grid">
-        <div class="card-feature reveal reveal-up stagger-1">
-          <div class="card-icon card-icon-blue" aria-hidden="true">🤖</div>
-          <h4>AI &amp; Machine Learning</h4>
-          <p>Open-source ML frameworks, model hosting infrastructure, and federated learning platforms that democratize artificial intelligence worldwide.</p>
-          <div style="margin-top:var(--sp-5);">
-            <a href="products.html#ai" class="btn-ghost btn">Learn more <span class="btn-arrow">→</span></a>
-          </div>
-        </div>
-        <div class="card-feature reveal reveal-up stagger-2">
-          <div class="card-icon card-icon-purple" aria-hidden="true">⛓️</div>
-          <h4>Decentralized Infrastructure</h4>
-          <p>Blockchain toolkits, decentralized identity systems, and Web3 frameworks enabling sovereignty and privacy at the edge of the network.</p>
-          <div style="margin-top:var(--sp-5);">
-            <a href="products.html#blockchain" class="btn-ghost btn">Learn more <span class="btn-arrow">→</span></a>
-          </div>
-        </div>
-        <div class="card-feature reveal reveal-up stagger-3">
-          <div class="card-icon card-icon-cyan" aria-hidden="true">🌐</div>
-          <h4>Global Platform APIs</h4>
-          <p>High-availability, low-latency APIs powering humanitarian applications — from health data aggregation to real-time crisis response systems.</p>
-          <div style="margin-top:var(--sp-5);">
-            <a href="products.html#platforms" class="btn-ghost btn">Learn more <span class="btn-arrow">→</span></a>
-          </div>
-        </div>
-        <div class="card-feature reveal reveal-up stagger-1">
-          <div class="card-icon card-icon-green" aria-hidden="true">📡</div>
-          <h4>Digital Equity Tools</h4>
-          <p>Connectivity infrastructure and offline-first toolkits that bring technology capabilities to low-resource and underserved environments.</p>
-          <div style="margin-top:var(--sp-5);">
-            <a href="products.html#equity" class="btn-ghost btn">Learn more <span class="btn-arrow">→</span></a>
-          </div>
-        </div>
-        <div class="card-feature reveal reveal-up stagger-2">
-          <div class="card-icon card-icon-gold" aria-hidden="true">🛡️</div>
-          <h4>Cybersecurity &amp; Privacy</h4>
-          <p>End-to-end encrypted communication protocols, threat intelligence sharing networks, and privacy-preserving computation tools.</p>
-          <div style="margin-top:var(--sp-5);">
-            <a href="products.html#security" class="btn-ghost btn">Learn more <span class="btn-arrow">→</span></a>
-          </div>
-        </div>
-        <div class="card-feature reveal reveal-up stagger-3">
-          <div class="card-icon card-icon-blue" aria-hidden="true">📚</div>
-          <h4>Research &amp; Education</h4>
-          <p>Open datasets, academic partnerships, and free learning resources empowering the next generation of global technology leaders and builders.</p>
-          <div style="margin-top:var(--sp-5);">
-            <a href="products.html#research" class="btn-ghost btn">Learn more <span class="btn-arrow">→</span></a>
-          </div>
-        </div>
-      </div>
-      <div class="text-center" style="margin-top:var(--sp-12);">
-        <a href="products.html" class="btn btn-secondary btn-lg" id="view-all-products-btn">View All Products &amp; Services</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== STATS BAR ===== -->
-  <section id="stats-bar" aria-label="Key statistics">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item reveal reveal-up stagger-1">
-          <div class="stat-number"><span data-counter="120" data-suffix="M+">0</span></div>
-          <div class="stat-label">Lives Impacted</div>
-        </div>
-        <div class="stat-item reveal reveal-up stagger-2">
-          <div class="stat-number"><span data-counter="350" data-suffix="+">0+</span></div>
-          <div class="stat-label">Open-Source Projects</div>
-        </div>
-        <div class="stat-item reveal reveal-up stagger-3">
-          <div class="stat-number"><span data-counter="48" data-suffix="+">0+</span></div>
-          <div class="stat-label">Countries Reached</div>
-        </div>
-        <div class="stat-item reveal reveal-up stagger-4">
-          <div class="stat-number"><span data-counter="2400" data-suffix="+">0+</span></div>
-          <div class="stat-label">Partner Organizations</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TESTIMONIALS ===== -->
-  <section class="section" id="testimonials" aria-labelledby="testimonials-heading">
-    <div class="container">
-      <div class="section-header reveal reveal-up">
-        <span class="section-label">Impact Stories</span>
-        <h2 id="testimonials-heading">Trusted by Global<br><span class="grad-text">Innovators</span></h2>
-      </div>
-      <div class="testimonials-track" role="list">
-        <div class="testimonial-card" role="listitem">
-          <div class="testimonial-quote" aria-hidden="true">"</div>
-          <p class="testimonial-text">TNF's federated learning platform helped us build a disease surveillance system for 12 countries — without compromising patient privacy. A true breakthrough.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar" aria-hidden="true">DR</div>
-            <div>
-              <div class="testimonial-name">Dr. Amara Osei</div>
-              <div class="testimonial-role">WHO Digital Health Lead</div>
+      <!-- ===== STATS BAR ===== -->
+      <section id="stats-bar" aria-label="Key statistics">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item reveal reveal-up stagger-1">
+              <div class="stat-number"><span data-counter="120" data-suffix="M+">0</span></div>
+              <div class="stat-label">Lives Impacted</div>
+            </div>
+            <div class="stat-item reveal reveal-up stagger-2">
+              <div class="stat-number"><span data-counter="350" data-suffix="+">0+</span></div>
+              <div class="stat-label">Open-Source Projects</div>
+            </div>
+            <div class="stat-item reveal reveal-up stagger-3">
+              <div class="stat-number"><span data-counter="48" data-suffix="+">0+</span></div>
+              <div class="stat-label">Countries Reached</div>
+            </div>
+            <div class="stat-item reveal reveal-up stagger-4">
+              <div class="stat-number"><span data-counter="2400" data-suffix="+">0+</span></div>
+              <div class="stat-label">Partner Organizations</div>
             </div>
           </div>
         </div>
-        <div class="testimonial-card" role="listitem">
-          <div class="testimonial-quote" aria-hidden="true">"</div>
-          <p class="testimonial-text">The Nicholas Foundation's open APIs power our entire crisis response platform. We went from prototype to serving 4 million users in under 6 months.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar" aria-hidden="true">MK</div>
-            <div>
-              <div class="testimonial-name">Maria Kovalenko</div>
-              <div class="testimonial-role">CTO, ReliefConnect</div>
+      </section>
+
+      <!-- ===== TESTIMONIALS ===== -->
+      <section class="section" id="testimonials" aria-labelledby="testimonials-heading">
+        <div class="container">
+          <div class="section-header reveal reveal-up">
+            <span class="section-label" data-i18n="section.impact">Impact Stories</span>
+            <h2 id="testimonials-heading">Trusted by Global<br><span class="grad-text">Innovators</span></h2>
+          </div>
+          <div class="testimonials-track" role="list">
+            <div class="testimonial-card" role="listitem">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <p class="testimonial-text">TruXSocial's moderation suite is best-in-class. We set up role-based access for our community managers in minutes, and the report queue workflow keeps our space safe without burning out volunteers.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" aria-hidden="true">AK</div>
+                <div>
+                  <div class="testimonial-name">Alex Kurosawa</div>
+                  <div class="testimonial-role">Community Lead, DevCircle</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card" role="listitem">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <p class="testimonial-text">DateX Sheet handles our 50K-row datasets without breaking a sweat. The WASM engine recalculates formulas before I can blink — no other browser-based spreadsheet comes close to this speed.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" aria-hidden="true">PS</div>
+                <div>
+                  <div class="testimonial-name">Priya Sharma</div>
+                  <div class="testimonial-role">Data Analyst, Finova Labs</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card" role="listitem">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <p class="testimonial-text">Nerd Companion's Day Load Score saved my exam season. It warned me before I burned out and suggested rest days I wouldn't have taken otherwise. My grades improved and I actually slept.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" aria-hidden="true">ML</div>
+                <div>
+                  <div class="testimonial-name">Marcus Lim</div>
+                  <div class="testimonial-role">Computer Science Student</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card" role="listitem">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <p class="testimonial-text">The dual-runtime architecture of TruXSocial is brilliant. PHP handles production traffic while the Node.js layer gives us health monitoring and shared sessions — best of both worlds.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" aria-hidden="true">RD</div>
+                <div>
+                  <div class="testimonial-name">Rachel Dubois</div>
+                  <div class="testimonial-role">Backend Engineer, TechForge</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card" role="listitem">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <p class="testimonial-text">I tried every study app on the market. Nerd Companion is the first one where the scheduling actually understands my energy patterns. The week planner with fallback slots is genius.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" aria-hidden="true">SK</div>
+                <div>
+                  <div class="testimonial-name">Sara Kim</div>
+                  <div class="testimonial-role">Medical Student</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-nav" role="group" aria-label="Testimonial navigation" style="margin-top:var(--sp-6);">
+            <button class="testimonial-arrow" id="testimonial-prev" aria-label="Previous testimonial" disabled>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <div class="testimonial-dots" role="tablist" aria-label="Testimonial dots"></div>
+            <button class="testimonial-arrow" id="testimonial-next" aria-label="Next testimonial">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== BLOG PREVIEW ===== -->
+      <section class="section" id="blog-preview" aria-labelledby="blog-preview-heading">
+        <div class="container">
+          <div class="section-header reveal reveal-up">
+            <span class="section-label" data-i18n="section.insights">Latest Insights</span>
+            <h2 id="blog-preview-heading"><span data-i18n="section.insights.title.1">From Our</span><br><span
+                class="grad-text" data-i18n="section.insights.title.2">Research Lab</span></h2>
+          </div>
+          <div class="blog-preview-grid">
+            <div class="card-blog reveal reveal-up stagger-1">
+              <div class="card-blog-image" style="background:linear-gradient(135deg,#0F1B33,#162040);">🤖</div>
+              <div class="card-blog-body">
+                <div class="card-blog-meta">
+                  <span class="badge badge-blue">AI &amp; ML</span>
+                  <span>March 28, 2026</span>
+                </div>
+                <h5><a href="blog.html">Federated Learning at the Edge: Lessons from 18 Months in the Field</a></h5>
+                <p style="font-size:var(--text-sm);">How we deployed privacy-preserving ML across 12 health systems
+                  without centralizing a single patient record.</p>
+                <a href="blog.html" class="btn-ghost btn" style="margin-top:var(--sp-4);">Read more <span
+                    class="btn-arrow">→</span></a>
+              </div>
+            </div>
+            <div class="card-blog reveal reveal-up stagger-2">
+              <div class="card-blog-image" style="background:linear-gradient(135deg,#1A0F33,#2D1640);">⛓️</div>
+              <div class="card-blog-body">
+                <div class="card-blog-meta">
+                  <span class="badge badge-purple">Blockchain</span>
+                  <span>March 15, 2026</span>
+                </div>
+                <h5><a href="blog.html">Decentralized Identity: Why Self-Sovereignty Matters for the Global South</a>
+                </h5>
+                <p style="font-size:var(--text-sm);">A deep dive into our DID implementation and how it's restoring
+                  agency to over 800,000 people.</p>
+                <a href="blog.html" class="btn-ghost btn" style="margin-top:var(--sp-4);">Read more <span
+                    class="btn-arrow">→</span></a>
+              </div>
+            </div>
+            <div class="card-blog reveal reveal-up stagger-3">
+              <div class="card-blog-image" style="background:linear-gradient(135deg,#0A1F1A,#102B24);">🌐</div>
+              <div class="card-blog-body">
+                <div class="card-blog-meta">
+                  <span class="badge badge-green">Infrastructure</span>
+                  <span>March 3, 2026</span>
+                </div>
+                <h5><a href="blog.html">Offline-First by Design: Building for 3 Billion People Without Reliable
+                    Internet</a></h5>
+                <p style="font-size:var(--text-sm);">The architectural decisions behind our connectivity toolkit used in
+                  28 low-resource environments.</p>
+                <a href="blog.html" class="btn-ghost btn" style="margin-top:var(--sp-4);">Read more <span
+                    class="btn-arrow">→</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="text-center" style="margin-top:var(--sp-10);">
+            <a href="blog.html" class="btn btn-secondary" id="view-all-blog-btn" data-i18n="btn.viewposts">View All
+              Posts</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CTA BANNER ===== -->
+      <section id="cta-banner" aria-labelledby="cta-heading">
+        <div class="container">
+          <div class="cta-inner reveal reveal-up">
+            <h2 id="cta-heading"><span data-i18n="cta.title.1">Ready to Build</span><br><span
+                data-i18n="cta.title.2">Something That Matters?</span></h2>
+            <p data-i18n="cta.desc">Join thousands of engineers, researchers, and organizations using TNF technology to
+              create global change.</p>
+            <div class="btn-group">
+              <a href="products.html" class="btn-white" id="cta-explore-btn" data-i18n="btn.explore">
+                Explore Our Platforms
+              </a>
+              <a href="contact.html" class="btn-outline-white" id="cta-contact-btn" data-i18n="btn.getintouch">
+                Get in Touch
+              </a>
             </div>
           </div>
         </div>
-        <div class="testimonial-card" role="listitem">
-          <div class="testimonial-quote" aria-hidden="true">"</div>
-          <p class="testimonial-text">Their blockchain identity toolkit gave our rural communities verifiable credentials for the first time. Hundreds of thousands now access financial services.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar" aria-hidden="true">JN</div>
-            <div>
-              <div class="testimonial-name">James Nganga</div>
-              <div class="testimonial-role">Director, Digital Inclusion Africa</div>
+      </section>
+
+      <!-- ===== PARTNERS ===== -->
+      <section class="section-sm" aria-label="Partner organizations">
+        <div class="container">
+          <p class="text-center text-muted"
+            style="font-size:var(--text-xs);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:var(--sp-6);"
+            data-i18n="partners.title">Trusted by Organizations Worldwide</p>
+          <div class="partners-strip">
+            <div class="partner-logo">WHO</div>
+            <div class="partner-logo">UNICEF</div>
+            <div class="partner-logo">MIT Lab</div>
+            <div class="partner-logo">UNDP</div>
+            <div class="partner-logo">Mozilla</div>
+            <div class="partner-logo">Linux Foundation</div>
+            <div class="partner-logo">Oxford</div>
+            <div class="partner-logo">USAID</div>
+            <div class="partner-logo">Gates Foundation</div>
+            <div class="partner-logo">Red Cross</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="footer" aria-label="Site footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand col -->
+          <div class="footer-brand">
+            <div class="footer-brand-logo">
+              <div class="footer-brand-mark" aria-hidden="true">N</div>
+              <span class="footer-brand-name">Nicholas Foundation</span>
+            </div>
+            <p class="footer-desc" data-i18n="footer.desc">A technology-first foundation building innovative systems
+              that drive global impact. Open-source. Transparent. For humanity.</p>
+            <div class="footer-socials">
+              <a href="#" class="footer-social" aria-label="Twitter / X">𝕏</a>
+              <a href="#" class="footer-social" aria-label="LinkedIn">in</a>
+              <a href="#" class="footer-social" aria-label="GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.73-4.04-1.6-4.04-1.6-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.25 2.88.12 3.18.77.84 1.24 1.9 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.3c0 .32.22.69.82.57C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z" />
+                </svg>
+              </a>
+              <a href="#" class="footer-social" aria-label="YouTube">▶</a>
+            </div>
+            <div class="footer-newsletter">
+              <div class="footer-newsletter-title" data-i18n="footer.stayupdated">Stay Updated</div>
+              <form class="footer-newsletter-form" aria-label="Newsletter signup">
+                <input type="email" class="footer-newsletter-input" placeholder="your@email.com"
+                  aria-label="Email address" required />
+                <button type="submit" class="footer-newsletter-btn" data-i18n="btn.subscribe">Subscribe</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Links col 1 -->
+          <div class="footer-col">
+            <div class="footer-col-title" data-i18n="footer.company">Company</div>
+            <nav class="footer-links" aria-label="Company links">
+              <a href="about.html" class="footer-link">About Us</a>
+              <a href="products.html" class="footer-link">Products</a>
+              <a href="blog.html" class="footer-link">Blog</a>
+              <a href="careers.html" class="footer-link">Careers</a>
+              <a href="contact.html" class="footer-link">Contact</a>
+            </nav>
+          </div>
+
+          <!-- Products col -->
+          <div class="footer-col">
+            <div class="footer-col-title">Products</div>
+            <nav class="footer-links" aria-label="Product links">
+              <a href="product-trux.html" class="footer-link">TruXSocial</a>
+              <a href="product-datex.html" class="footer-link">DateX Sheet</a>
+              <a href="product-nerd.html" class="footer-link">Nerd Companion</a>
+            </nav>
+          </div>
+
+          <!-- Links col 2 -->
+          <div class="footer-col">
+            <div class="footer-col-title" data-i18n="footer.resources">Resources</div>
+            <nav class="footer-links" aria-label="Resource links">
+              <a href="support.html" class="footer-link">Support Center</a>
+              <a href="faq.html" class="footer-link">FAQ</a>
+              <a href="#" class="footer-link">Documentation</a>
+              <a href="#" class="footer-link">GitHub</a>
+            </nav>
+          </div>
+
+          <!-- Contact col -->
+          <div class="footer-col">
+            <div class="footer-col-title" data-i18n="footer.contact">Contact</div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon" aria-hidden="true">✉</div>
+              <div>
+                <div style="font-weight:500;font-size:var(--text-sm);color:var(--text-secondary);">
+                  hello@nicholasfoundation.org</div>
+                <div>General Inquiries</div>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon" aria-hidden="true">🛡</div>
+              <div>
+                <div style="font-weight:500;font-size:var(--text-sm);color:var(--text-secondary);">
+                  support@nicholasfoundation.org</div>
+                <div>Technical Support</div>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon" aria-hidden="true">📍</div>
+              <div>
+                <div style="font-weight:500;font-size:var(--text-sm);color:var(--text-secondary);">Global HQ</div>
+                <div>Available Worldwide</div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="testimonial-card" role="listitem">
-          <div class="testimonial-quote" aria-hidden="true">"</div>
-          <p class="testimonial-text">As a research institution, TNF's open datasets and ML toolkits accelerated our climate modeling work by years. The quality of their engineering is remarkable.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar" aria-hidden="true">SL</div>
-            <div>
-              <div class="testimonial-name">Prof. Sophia Lin</div>
-              <div class="testimonial-role">MIT Media Lab</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card" role="listitem">
-          <div class="testimonial-quote" aria-hidden="true">"</div>
-          <p class="testimonial-text">We deployed TNF's offline-first toolkit in remote Himalayan schools. Students who had never used a computer are now learning to code. That's impact.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar" aria-hidden="true">RB</div>
-            <div>
-              <div class="testimonial-name">Rajesh Bhatt</div>
-              <div class="testimonial-role">Founder, Mountain Code</div>
-            </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copy">© <span id="footer-year"></span> <span data-i18n="footer.copyright">The Nicholas
+              Foundation. All rights reserved.</span></p>
+          <div class="footer-bottom-links">
+            <a href="privacy.html" class="footer-bottom-link" data-i18n="footer.privacy">Privacy Policy</a>
+            <a href="privacy.html" class="footer-bottom-link" data-i18n="footer.terms">Terms of Service</a>
+            <a href="#" class="footer-bottom-link" data-i18n="footer.cookies">Cookie Settings</a>
           </div>
         </div>
       </div>
-      <div class="testimonial-nav" role="group" aria-label="Testimonial navigation" style="margin-top:var(--sp-6);">
-        <button class="testimonial-arrow" id="testimonial-prev" aria-label="Previous testimonial" disabled>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
-        </button>
-        <div class="testimonial-dots" role="tablist" aria-label="Testimonial dots"></div>
-        <button class="testimonial-arrow" id="testimonial-next" aria-label="Next testimonial">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
-        </button>
-      </div>
-    </div>
-  </section>
+    </footer>
+  </div><!-- /.page-wrapper -->
 
-  <!-- ===== BLOG PREVIEW ===== -->
-  <section class="section" id="blog-preview" aria-labelledby="blog-preview-heading">
-    <div class="container">
-      <div class="section-header reveal reveal-up">
-        <span class="section-label">Latest Insights</span>
-        <h2 id="blog-preview-heading">From Our<br><span class="grad-text">Research Lab</span></h2>
-      </div>
-      <div class="blog-preview-grid">
-        <div class="card-blog reveal reveal-up stagger-1">
-          <div class="card-blog-image" style="background:linear-gradient(135deg,#0F1B33,#162040);">🤖</div>
-          <div class="card-blog-body">
-            <div class="card-blog-meta">
-              <span class="badge badge-blue">AI &amp; ML</span>
-              <span>March 28, 2026</span>
-            </div>
-            <h5><a href="blog.html">Federated Learning at the Edge: Lessons from 18 Months in the Field</a></h5>
-            <p style="font-size:var(--text-sm);">How we deployed privacy-preserving ML across 12 health systems without centralizing a single patient record.</p>
-            <a href="blog.html" class="btn-ghost btn" style="margin-top:var(--sp-4);">Read more <span class="btn-arrow">→</span></a>
-          </div>
-        </div>
-        <div class="card-blog reveal reveal-up stagger-2">
-          <div class="card-blog-image" style="background:linear-gradient(135deg,#1A0F33,#2D1640);">⛓️</div>
-          <div class="card-blog-body">
-            <div class="card-blog-meta">
-              <span class="badge badge-purple">Blockchain</span>
-              <span>March 15, 2026</span>
-            </div>
-            <h5><a href="blog.html">Decentralized Identity: Why Self-Sovereignty Matters for the Global South</a></h5>
-            <p style="font-size:var(--text-sm);">A deep dive into our DID implementation and how it's restoring agency to over 800,000 people.</p>
-            <a href="blog.html" class="btn-ghost btn" style="margin-top:var(--sp-4);">Read more <span class="btn-arrow">→</span></a>
-          </div>
-        </div>
-        <div class="card-blog reveal reveal-up stagger-3">
-          <div class="card-blog-image" style="background:linear-gradient(135deg,#0A1F1A,#102B24);">🌐</div>
-          <div class="card-blog-body">
-            <div class="card-blog-meta">
-              <span class="badge badge-green">Infrastructure</span>
-              <span>March 3, 2026</span>
-            </div>
-            <h5><a href="blog.html">Offline-First by Design: Building for 3 Billion People Without Reliable Internet</a></h5>
-            <p style="font-size:var(--text-sm);">The architectural decisions behind our connectivity toolkit used in 28 low-resource environments.</p>
-            <a href="blog.html" class="btn-ghost btn" style="margin-top:var(--sp-4);">Read more <span class="btn-arrow">→</span></a>
-          </div>
-        </div>
-      </div>
-      <div class="text-center" style="margin-top:var(--sp-10);">
-        <a href="blog.html" class="btn btn-secondary" id="view-all-blog-btn">View All Posts</a>
-      </div>
-    </div>
-  </section>
+  <!-- Back to Top -->
+  <button id="back-to-top" aria-label="Scroll to top">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
+  </button>
 
-  <!-- ===== CTA BANNER ===== -->
-  <section id="cta-banner" aria-labelledby="cta-heading">
-    <div class="container">
-      <div class="cta-inner reveal reveal-up">
-        <h2 id="cta-heading">Ready to Build<br>Something That Matters?</h2>
-        <p>Join thousands of engineers, researchers, and organizations using TNF technology to create global change.</p>
-        <div class="btn-group">
-          <a href="products.html" class="btn-white" id="cta-explore-btn">
-            Explore Our Platforms
-          </a>
-          <a href="contact.html" class="btn-outline-white" id="cta-contact-btn">
-            Get in Touch
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // Set current year in footer/sidebar
+    const yr = new Date().getFullYear();
+    document.getElementById('footer-year').textContent = yr;
+    document.getElementById('sidebar-year').textContent = yr;
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/globe.gl/dist/globe.gl.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+  <script src="js/main.js?v=3"></script>
+  <script src="js/animations.js?v=2"></script>
+  <script src="js/modal.js?v=3"></script>
+  <script src="js/cursor.js?v=1"></script>
+  <script src="js/globe.js?v=3"></script>
+  <script src="js/i18n.js?v=1"></script>
 
-  <!-- ===== PARTNERS ===== -->
-  <section class="section-sm" aria-label="Partner organizations">
-    <div class="container">
-      <p class="text-center text-muted" style="font-size:var(--text-xs);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:var(--sp-6);">Trusted by Organizations Worldwide</p>
-      <div class="partners-strip">
-        <div class="partner-logo">WHO</div>
-        <div class="partner-logo">UNICEF</div>
-        <div class="partner-logo">MIT Lab</div>
-        <div class="partner-logo">UNDP</div>
-        <div class="partner-logo">Mozilla</div>
-        <div class="partner-logo">Linux Foundation</div>
-        <div class="partner-logo">Oxford</div>
-        <div class="partner-logo">USAID</div>
-        <div class="partner-logo">Gates Foundation</div>
-        <div class="partner-logo">Red Cross</div>
+  <!-- Cookie Consent -->
+  <div id="cookie-consent" class="cookie-banner" role="dialog" aria-modal="true" aria-label="Cookie preferences"
+    aria-live="polite">
+    <div class="cookie-text"><strong data-i18n="cookie.title">🍪 We use minimal cookies</strong> <span
+        data-i18n="cookie.desc">to save your preferences and understand how our site is used.</span> <a
+        href="privacy.html#cookies" class="cookie-link" data-i18n="cookie.learn">Learn more</a></div>
+    <div class="cookie-actions"><button id="cookie-reject" class="btn btn-sm btn-secondary"
+        data-i18n="cookie.essential">Essential Only</button><button id="cookie-accept" class="btn btn-sm btn-primary"
+        data-i18n="cookie.accept">Accept All</button></div>
+  </div>
+  <!-- Search Modal -->
+  <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Site search"
+    tabindex="-1">
+    <div class="search-modal">
+      <div class="search-modal-header">
+        <div class="search-wrap" style="flex:1;"><span class="search-icon" aria-hidden="true"><svg width="18"
+              height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8" />
+              <path d="M21 21l-4.35-4.35" />
+            </svg></span><input type="search" id="search-field" class="search-input"
+            placeholder="Search pages, topics, platforms…" autocomplete="off" aria-label="Search" /></div>
+        <button id="search-close" class="search-close-btn" aria-label="Close search">ESC</button>
       </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- ===== FOOTER ===== -->
-<footer id="footer" aria-label="Site footer">
-  <div class="container">
-    <div class="footer-grid">
-      <!-- Brand col -->
-      <div class="footer-brand">
-        <div class="footer-brand-logo">
-          <div class="footer-brand-mark" aria-hidden="true">N</div>
-          <span class="footer-brand-name">Nicholas Foundation</span>
-        </div>
-        <p class="footer-desc">A technology-first foundation building innovative systems that drive global impact. Open-source. Transparent. For humanity.</p>
-        <div class="footer-socials">
-          <a href="#" class="footer-social" aria-label="Twitter / X">𝕏</a>
-          <a href="#" class="footer-social" aria-label="LinkedIn">in</a>
-          <a href="#" class="footer-social" aria-label="GitHub">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.73-4.04-1.6-4.04-1.6-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.25 2.88.12 3.18.77.84 1.24 1.9 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.3c0 .32.22.69.82.57C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
-          </a>
-          <a href="#" class="footer-social" aria-label="YouTube">▶</a>
-        </div>
-        <div class="footer-newsletter">
-          <div class="footer-newsletter-title">Stay Updated</div>
-          <form class="footer-newsletter-form" aria-label="Newsletter signup">
-            <input type="email" class="footer-newsletter-input" placeholder="your@email.com" aria-label="Email address" required />
-            <button type="submit" class="footer-newsletter-btn">Subscribe</button>
-          </form>
-        </div>
-      </div>
-
-      <!-- Links col 1 -->
-      <div class="footer-col">
-        <div class="footer-col-title">Company</div>
-        <nav class="footer-links" aria-label="Company links">
-          <a href="about.html"    class="footer-link">About Us</a>
-          <a href="products.html" class="footer-link">Products</a>
-          <a href="blog.html"     class="footer-link">Blog</a>
-          <a href="careers.html"  class="footer-link">Careers</a>
-          <a href="contact.html"  class="footer-link">Contact</a>
-        </nav>
-      </div>
-
-      <!-- Links col 2 -->
-      <div class="footer-col">
-        <div class="footer-col-title">Resources</div>
-        <nav class="footer-links" aria-label="Resource links">
-          <a href="support.html"  class="footer-link">Support Center</a>
-          <a href="faq.html"      class="footer-link">FAQ</a>
-          <a href="#"             class="footer-link">Documentation</a>
-          <a href="#"             class="footer-link">API Reference</a>
-          <a href="#"             class="footer-link">Open Source</a>
-        </nav>
-      </div>
-
-      <!-- Contact col -->
-      <div class="footer-col">
-        <div class="footer-col-title">Contact</div>
-        <div class="footer-contact-item">
-          <div class="footer-contact-icon" aria-hidden="true">✉</div>
-          <div><div style="font-weight:500;font-size:var(--text-sm);color:var(--text-secondary);">hello@nicholasfoundation.org</div><div>General Inquiries</div></div>
-        </div>
-        <div class="footer-contact-item">
-          <div class="footer-contact-icon" aria-hidden="true">🛡</div>
-          <div><div style="font-weight:500;font-size:var(--text-sm);color:var(--text-secondary);">support@nicholasfoundation.org</div><div>Technical Support</div></div>
-        </div>
-        <div class="footer-contact-item">
-          <div class="footer-contact-icon" aria-hidden="true">📍</div>
-          <div><div style="font-weight:500;font-size:var(--text-sm);color:var(--text-secondary);">Global HQ</div><div>Available Worldwide</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p class="footer-copy">© <span id="footer-year"></span> The Nicholas Foundation. All rights reserved.</p>
-      <div class="footer-bottom-links">
-        <a href="privacy.html" class="footer-bottom-link">Privacy Policy</a>
-        <a href="privacy.html" class="footer-bottom-link">Terms of Service</a>
-        <a href="#"            class="footer-bottom-link">Cookie Settings</a>
-      </div>
+      <div id="search-results" class="search-results" aria-live="polite"></div>
+      <div class="search-footer"><span>Press <kbd>↑</kbd><kbd>↓</kbd> to navigate · <kbd>Enter</kbd> to open ·
+          <kbd>ESC</kbd> to close</span></div>
     </div>
   </div>
-</footer>
-</div><!-- /.page-wrapper -->
-
-<!-- Back to Top -->
-<button id="back-to-top" aria-label="Scroll to top">
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
-</button>
-
-<!-- ===== SCRIPTS ===== -->
-<script>
-  // Set current year in footer/sidebar
-  const yr = new Date().getFullYear();
-  document.getElementById('footer-year').textContent  = yr;
-  document.getElementById('sidebar-year').textContent = yr;
-</script>
-<script src="js/main.js?v=2"></script>
-<script src="js/animations.js"></script>
-<script src="js/modal.js?v=2"></script>
-
-<!-- Cookie Consent -->
-<div id="cookie-consent" class="cookie-banner" role="dialog" aria-modal="true" aria-label="Cookie preferences" aria-live="polite">
-  <div class="cookie-text"><strong>🍪 We use minimal cookies</strong> to save your preferences and understand how our site is used. <a href="privacy.html#cookies" class="cookie-link">Learn more</a></div>
-  <div class="cookie-actions"><button id="cookie-reject" class="btn btn-sm btn-secondary">Essential Only</button><button id="cookie-accept" class="btn btn-sm btn-primary">Accept All</button></div>
-</div>
-<!-- Search Modal -->
-<div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Site search" tabindex="-1">
-  <div class="search-modal">
-    <div class="search-modal-header">
-      <div class="search-wrap" style="flex:1;"><span class="search-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></span><input type="search" id="search-field" class="search-input" placeholder="Search pages, topics, platforms…" autocomplete="off" aria-label="Search" /></div>
-      <button id="search-close" class="search-close-btn" aria-label="Close search">ESC</button>
-    </div>
-    <div id="search-results" class="search-results" aria-live="polite"></div>
-    <div class="search-footer"><span>Press <kbd>↑</kbd><kbd>↓</kbd> to navigate · <kbd>Enter</kbd> to open · <kbd>ESC</kbd> to close</span></div>
-  </div>
-</div>
-<div id="page-transition-overlay" aria-hidden="true"></div>
-<script src="js/enhancements.js?v=2"></script>
+  <div id="page-transition-overlay" aria-hidden="true"></div>
+  <script src="js/enhancements.js?v=3"></script>
 </body>
+
 </html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nerd Companion — A dedicated study app with Pomodoro timers, smart scheduling, and gamified learning. By The Nicholas Foundation." />
+  <title>Nerd Companion — The Nicholas Foundation</title>
+  <meta property="og:title" content="Nerd Companion — Study Smarter" />
+  <meta property="og:description" content="Pomodoro timers, day-load scoring, smart scheduling, journaling, and gamified streaks in one study app." />
+  <meta property="og:image" content="/assets/og-card.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="css/main.css" /><link rel="stylesheet" href="css/components.css" /><link rel="stylesheet" href="css/layout.css" /><link rel="stylesheet" href="css/animations.css" /><link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/enhancements.css" />
+  <link rel="stylesheet" href="css/cursor.css" />
+  <link rel="stylesheet" href="css/i18n.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234F8EF7'/><text y='72' x='50' font-size='60' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'>N</text></svg>" />
+</head>
+<body>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div id="scroll-progress"></div>
+<nav id="navbar" class="transparent" aria-label="Main navigation">
+  <div class="navbar-container">
+    <div class="navbar-left"><button id="hamburger" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+    <a href="index.html" class="navbar-logo"><div class="navbar-logo-mark">N</div><div class="navbar-logo-text"><span class="navbar-logo-name">Nicholas Foundation</span><span class="navbar-logo-tagline" data-i18n="nav.tagline">Engineering the Future</span></div></a>
+    <div class="navbar-right"><button id="search-btn" aria-label="Search (Ctrl+K)" title="Search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button><button id="theme-toggle" aria-label="Toggle theme"></button><button id="profile-btn" aria-label="Profile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button></div>
+  </div>
+</nav>
+<div id="sidebar-backdrop"></div>
+<aside id="sidebar" role="dialog" aria-label="Navigation" aria-modal="true">
+  <div class="sidebar-header"><div class="sidebar-logo"><div class="sidebar-logo-mark">N</div><span class="sidebar-logo-name">Nicholas Foundation</span></div><button id="sidebar-close" aria-label="Close">✕</button></div>
+  <nav class="sidebar-nav">
+    <div class="sidebar-nav-group"><div class="sidebar-nav-label">Main</div><a href="index.html" class="sidebar-nav-link"><span class="nav-icon">🏠</span> Home</a><a href="about.html" class="sidebar-nav-link"><span class="nav-icon">🔭</span> About Us</a><a href="products.html" class="sidebar-nav-link active"><span class="nav-icon">⚡</span> Products &amp; Services</a><a href="blog.html" class="sidebar-nav-link"><span class="nav-icon">📡</span> Blog</a></div>
+    <div class="sidebar-nav-group"><div class="sidebar-nav-label">Company</div><a href="careers.html" class="sidebar-nav-link"><span class="nav-icon">🚀</span> Careers</a><a href="contact.html" class="sidebar-nav-link"><span class="nav-icon">✉️</span> Contact Us</a><a href="support.html" class="sidebar-nav-link"><span class="nav-icon">🛡️</span> Support</a><a href="faq.html" class="sidebar-nav-link"><span class="nav-icon">💡</span> FAQ</a><a href="privacy.html" class="sidebar-nav-link"><span class="nav-icon">🔒</span> Privacy</a></div>
+  </nav>
+  <div class="sidebar-footer"><div class="sidebar-socials"><a href="#" class="sidebar-social-link">𝕏</a><a href="#" class="sidebar-social-link">in</a></div><p class="sidebar-copy">© <span id="sidebar-year"></span> The Nicholas Foundation</p></div>
+</aside>
+
+<div class="page-wrapper">
+<main id="main-content">
+
+  <!-- HERO -->
+  <section class="page-hero product-detail-hero" aria-labelledby="nerd-hero-h">
+    <div class="product-hero-accent product-hero-accent--nerd" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <span class="section-label">Education</span>
+      <span class="product-hero-icon" aria-hidden="true">📚</span>
+      <h1 id="nerd-hero-h">Nerd <span class="grad-text--nerd">Companion</span></h1>
+      <p class="product-hero-tagline">Your dedicated study companion with Pomodoro timers, intelligent day-load scoring, smart scheduling, journaling, and a gamified streak system — designed to help you study smarter, not harder.</p>
+      <div style="display:flex;gap:var(--sp-4);justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-primary btn-lg">Get Early Access</a>
+        <a href="products.html" class="btn btn-secondary btn-lg">All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="section" style="background:var(--bg-secondary);">
+    <div class="container">
+      <div class="product-highlight-grid reveal reveal-up">
+        <div class="product-highlight-item"><div class="product-highlight-number grad-text--nerd">35</div><div class="product-highlight-label">UI Components</div></div>
+        <div class="product-highlight-item"><div class="product-highlight-number grad-text--nerd">10</div><div class="product-highlight-label">Screens</div></div>
+        <div class="product-highlight-item"><div class="product-highlight-number grad-text--nerd">6</div><div class="product-highlight-label">Database Modules</div></div>
+        <div class="product-highlight-item"><div class="product-highlight-number grad-text--nerd">4</div><div class="product-highlight-label">State Stores</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" aria-labelledby="nerd-features-h">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-label">Core Features</span>
+        <h2 id="nerd-features-h">Study Smarter<br><span class="grad-text--nerd">Stay Focused</span></h2>
+      </div>
+      <div class="product-features-grid">
+        <div class="product-feature-card reveal reveal-up stagger-1"><span class="product-feature-icon">🍅</span><h4>Pomodoro Timer</h4><p>SVG progress ring with configurable work/break/rounds, auto-advance between phases, and automatic session tracking. Focus mode redirects to journal on completion.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-2"><span class="product-feature-icon">📊</span><h4>Day Load Score</h4><p>An intelligent formula that weighs heavy subjects, detects break gaps, and scores your day's study load. Warns when you're overloading and suggests rest when needed.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-3"><span class="product-feature-icon">🧠</span><h4>Smart Scheduling</h4><p>"Recommend me!" uses the Phase 2 scheduler for single sessions and full week planning — with overlap detection, preferred-window awareness, and fallback slot suggestions.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-1"><span class="product-feature-icon">📓</span><h4>Journal &amp; Revisit</h4><p>Post-session journaling with mood tracking, topic coverage notes, revisit items, and free-form reflection. A revisit queue surfaces unresolved topics for future study.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-2"><span class="product-feature-icon">📅</span><h4>Timetable &amp; Subjects</h4><p>Colour-coded subject management with icon pickers, weight priorities, and weekly hour targets. Visual timetable grid with day columns, time axis, and positioned session blocks.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-3"><span class="product-feature-icon">🏆</span><h4>Nerd Score &amp; Streak</h4><p>A gamified scoring system that rewards consistent study habits. Daily streak tracking, rotating study tips, and stat cards showing today/week/streak progress at a glance.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="section" style="background:var(--bg-secondary);" aria-labelledby="nerd-arch-h">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-label">Architecture</span>
+        <h2 id="nerd-arch-h">Built with<br><span class="grad-text--nerd">Modern Native</span></h2>
+        <p>Expo SDK 54 + React Native with TypeScript strict mode, local-first SQLite, and Zustand state management.</p>
+      </div>
+      <div class="product-arch-block reveal reveal-up" style="max-width:720px;margin:0 auto;">
+        <div class="product-arch-header"><div class="product-arch-dots"><span></span><span></span><span></span></div><span class="product-arch-title">nerd-architecture.txt</span></div>
+        <div class="product-arch-body">┌─────────────────────────────────────┐
+│       Expo Router (Navigation)      │
+│  10 screens · Responsive layout     │
+├─────────────────────────────────────┤
+│  35 React Native Components         │
+│  Subject · Session · Journal · Nav  │
+│  Focus · Timetable · Recommend      │
+├─────────────────────────────────────┤
+│  4 Zustand Stores                   │
+│  Subjects · Sessions · Journal      │
+│  Settings (typed updateSetting)     │
+├─────────────────────────────────────┤
+│  Pure Logic Modules                 │
+│  dateUtils · dayLoadScore           │
+│  nerdScore · logger                 │
+├─────────────────────────────────────┤
+│  SQLite via expo-sqlite             │
+│  6 tables · Migration runner        │
+│  Foreign keys · Default seeds       │
+└─────────────────────────────────────┘</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORMS -->
+  <section class="section" aria-labelledby="nerd-platforms-h">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-label">Platforms</span>
+        <h2 id="nerd-platforms-h">Study Anywhere</h2>
+      </div>
+      <div class="platform-grid reveal reveal-up">
+        <div class="platform-badge"><span class="platform-badge-icon">📱</span><span class="platform-badge-name">iOS</span><span class="platform-badge-status platform-badge-status--dev">In Dev</span></div>
+        <div class="platform-badge"><span class="platform-badge-icon">🤖</span><span class="platform-badge-name">Android</span><span class="platform-badge-status platform-badge-status--dev">In Dev</span></div>
+        <div class="platform-badge"><span class="platform-badge-icon">🌐</span><span class="platform-badge-name">Web</span><span class="platform-badge-status platform-badge-status--dev">In Dev</span></div>
+        <div class="platform-badge"><span class="platform-badge-icon">🖥️</span><span class="platform-badge-name">Desktop</span><span class="platform-badge-status platform-badge-status--dev">In Dev</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="section" style="background:var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal reveal-up"><span class="section-label">Technology</span><h2>Tech Stack</h2></div>
+      <div class="tech-stack-grid reveal reveal-up">
+        <span class="tech-stack-chip">Expo SDK 54</span><span class="tech-stack-chip">React Native</span><span class="tech-stack-chip">TypeScript</span><span class="tech-stack-chip">expo-router</span><span class="tech-stack-chip">expo-sqlite</span><span class="tech-stack-chip">Zustand</span><span class="tech-stack-chip">Reanimated 4</span><span class="tech-stack-chip">date-fns</span><span class="tech-stack-chip">Lucide Icons</span><span class="tech-stack-chip">DM Sans</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb-wrap"><div class="container"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html" class="breadcrumb-link">Home</a><span class="breadcrumb-sep" aria-hidden="true">/</span><a href="products.html" class="breadcrumb-link">Products</a><span class="breadcrumb-sep" aria-hidden="true">/</span><span class="breadcrumb-current" aria-current="page">Nerd Companion</span></nav></div></div>
+
+  <!-- CTA -->
+  <section id="cta-banner"><div class="container"><div class="cta-inner reveal reveal-up">
+    <h2>Ready to Level Up<br>Your Studies?</h2>
+    <p>Nerd Companion helps you build sustainable study habits with science-backed techniques and zero distractions.</p>
+    <div class="btn-group"><a href="contact.html" class="btn-white">Get Notified</a><a href="products.html" class="btn-outline-white">View All Products</a></div>
+  </div></div></section>
+
+</main>
+<footer id="footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><div class="footer-brand-logo"><div class="footer-brand-mark">N</div><span class="footer-brand-name">Nicholas Foundation</span></div><p class="footer-desc">A technology-first foundation building innovative systems for global impact.</p><div class="footer-socials"><a href="#" class="footer-social">𝕏</a><a href="#" class="footer-social">in</a></div><div class="footer-newsletter"><div class="footer-newsletter-title">Stay Updated</div><form class="footer-newsletter-form"><input type="email" class="footer-newsletter-input" placeholder="your@email.com" /><button type="submit" class="footer-newsletter-btn">Subscribe</button></form></div></div>
+  <div class="footer-col"><div class="footer-col-title">Company</div><nav class="footer-links"><a href="about.html" class="footer-link">About Us</a><a href="products.html" class="footer-link">Products</a><a href="blog.html" class="footer-link">Blog</a><a href="careers.html" class="footer-link">Careers</a><a href="contact.html" class="footer-link">Contact</a></nav></div>
+  <div class="footer-col"><div class="footer-col-title">Products</div><nav class="footer-links"><a href="product-trux.html" class="footer-link">TruXSocial</a><a href="product-datex.html" class="footer-link">DateX Sheet</a><a href="product-nerd.html" class="footer-link">Nerd Companion</a></nav></div>
+  <div class="footer-col"><div class="footer-col-title">Resources</div><nav class="footer-links"><a href="support.html" class="footer-link">Support</a><a href="faq.html" class="footer-link">FAQ</a><a href="#" class="footer-link">Docs</a></nav></div>
+</div><div class="footer-bottom"><p class="footer-copy">© <span id="footer-year"></span> The Nicholas Foundation.</p><div class="footer-bottom-links"><a href="privacy.html" class="footer-bottom-link">Privacy Policy</a><a href="privacy.html" class="footer-bottom-link">Terms of Service</a></div></div></div></footer>
+</div>
+<button id="back-to-top" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+<script>document.getElementById('footer-year').textContent=document.getElementById('sidebar-year').textContent=new Date().getFullYear();</script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="js/main.js?v=3"></script>
+<script src="js/animations.js"></script>
+<script src="js/modal.js?v=3"></script>
+<script src="js/cursor.js?v=1"></script>
+<script src="js/i18n.js?v=1"></script>
+</body>
+</html>
