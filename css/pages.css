@@ -812,6 +812,7 @@
 .product-hero-accent--trux   { background: linear-gradient(135deg, #f97316 0%, #ef4444 50%, #a855f7 100%); }
 .product-hero-accent--datex  { background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%); }
 .product-hero-accent--nerd   { background: linear-gradient(135deg, #10b981 0%, #14b8a6 50%, #06b6d4 100%); }
+.product-hero-accent--nyx    { background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #ec4899 100%); }
 
 .product-detail-hero .page-hero { position: relative; z-index: 1; }
 
@@ -847,11 +848,17 @@
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+.grad-text--nyx {
+  background: linear-gradient(135deg, #7c3aed, #ec4899);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 /* Badge accent colors */
 .badge-orange { background: rgba(249,115,22,0.12); color: #f97316; }
 .badge-indigo { background: rgba(99,102,241,0.12); color: #818cf8; }
 .badge-emerald { background: rgba(16,185,129,0.12); color: #10b981; }
+.badge-purple  { background: rgba(124,58,237,0.12); color: #a855f7; }
 
 /* Feature grid — 3×2 layout */
 .product-features-grid {

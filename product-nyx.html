@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nyx AI — A rule-based AI assistant built in C++20 with a WPF desktop GUI, JSON-line protocol, organizer suite, and roadmap to machine learning. By The Nicholas Foundation." />
+  <title>Nyx AI — The Nicholas Foundation</title>
+  <meta property="og:title" content="Nyx AI — Intelligent Assistance, Engineered from Scratch" />
+  <meta property="og:description" content="A C++20 rule engine with desktop GUI, organizer, memory, and reminders. Built to compete." />
+  <meta property="og:image" content="/assets/og-card.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="css/main.css" /><link rel="stylesheet" href="css/components.css" /><link rel="stylesheet" href="css/layout.css" /><link rel="stylesheet" href="css/animations.css" /><link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/enhancements.css" />
+  <link rel="stylesheet" href="css/cursor.css" />
+  <link rel="stylesheet" href="css/i18n.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234F8EF7'/><text y='72' x='50' font-size='60' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'>N</text></svg>" />
+</head>
+<body>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div id="scroll-progress"></div>
+<nav id="navbar" class="transparent" aria-label="Main navigation">
+  <div class="navbar-container">
+    <div class="navbar-left"><button id="hamburger" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+    <a href="index.html" class="navbar-logo"><div class="navbar-logo-mark">N</div><div class="navbar-logo-text"><span class="navbar-logo-name">Nicholas Foundation</span><span class="navbar-logo-tagline" data-i18n="nav.tagline">Engineering the Future</span></div></a>
+    <div class="navbar-right"><button id="search-btn" aria-label="Search (Ctrl+K)" title="Search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button><button id="theme-toggle" aria-label="Toggle theme"></button><button id="profile-btn" aria-label="Profile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button></div>
+  </div>
+</nav>
+<div id="sidebar-backdrop"></div>
+<aside id="sidebar" role="dialog" aria-label="Navigation" aria-modal="true">
+  <div class="sidebar-header"><div class="sidebar-logo"><div class="sidebar-logo-mark">N</div><span class="sidebar-logo-name">Nicholas Foundation</span></div><button id="sidebar-close" aria-label="Close">✕</button></div>
+  <nav class="sidebar-nav">
+    <div class="sidebar-nav-group"><div class="sidebar-nav-label">Main</div><a href="index.html" class="sidebar-nav-link"><span class="nav-icon">🏠</span> Home</a><a href="about.html" class="sidebar-nav-link"><span class="nav-icon">🔭</span> About Us</a><a href="products.html" class="sidebar-nav-link active"><span class="nav-icon">⚡</span> Products &amp; Services</a><a href="blog.html" class="sidebar-nav-link"><span class="nav-icon">📡</span> Blog</a></div>
+    <div class="sidebar-nav-group"><div class="sidebar-nav-label">Company</div><a href="careers.html" class="sidebar-nav-link"><span class="nav-icon">🚀</span> Careers</a><a href="contact.html" class="sidebar-nav-link"><span class="nav-icon">✉️</span> Contact Us</a><a href="support.html" class="sidebar-nav-link"><span class="nav-icon">🛡️</span> Support</a><a href="faq.html" class="sidebar-nav-link"><span class="nav-icon">💡</span> FAQ</a><a href="privacy.html" class="sidebar-nav-link"><span class="nav-icon">🔒</span> Privacy</a></div>
+  </nav>
+  <div class="sidebar-footer"><div class="sidebar-socials"><a href="#" class="sidebar-social-link">𝕏</a><a href="#" class="sidebar-social-link">in</a></div><p class="sidebar-copy">© <span id="sidebar-year"></span> The Nicholas Foundation</p></div>
+</aside>
+
+<div class="page-wrapper">
+<main id="main-content">
+
+  <!-- HERO -->
+  <section class="page-hero product-detail-hero" aria-labelledby="nyx-hero-h">
+    <div class="product-hero-accent product-hero-accent--nyx" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <span class="section-label">Artificial Intelligence</span>
+      <span class="product-hero-icon" aria-hidden="true">🧠</span>
+      <h1 id="nyx-hero-h">Nyx <span class="grad-text--nyx">AI</span></h1>
+      <p class="product-hero-tagline">A rule-based AI assistant built from scratch in C++20 — featuring a high-performance rule engine, persistent memory, a full organizer suite with notes, tasks and reminders, a WPF desktop GUI, and a roadmap to competitive machine learning.</p>
+      <div style="display:flex;gap:var(--sp-4);justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-primary btn-lg">Get Early Access</a>
+        <a href="products.html" class="btn btn-secondary btn-lg">All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="section" style="background:var(--bg-secondary);">
+    <div class="container">
+      <div class="product-highlight-grid reveal reveal-up">
+        <div class="product-highlight-item"><div class="product-highlight-number grad-text--nyx">C++20</div><div class="product-highlight-label">Core Engine</div></div>
+        <div class="product-highlight-item"><div class="product-highlight-number grad-text--nyx">v0.9</div><div class="product-highlight-label">Current Version</div></div>
+        <div class="product-highlight-item"><div class="product-highlight-number grad-text--nyx">JSON</div><div class="product-highlight-label">Protocol v1</div></div>
+        <div class="product-highlight-item"><div class="product-highlight-number grad-text--nyx">WPF</div><div class="product-highlight-label">Desktop GUI</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" aria-labelledby="nyx-features-h">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-label">Core Capabilities</span>
+        <h2 id="nyx-features-h">Intelligence<br><span class="grad-text--nyx">From the Ground Up</span></h2>
+      </div>
+      <div class="product-features-grid">
+        <div class="product-feature-card reveal reveal-up stagger-1"><span class="product-feature-icon">💬</span><h4>Rule Engine Chat</h4><p>Normalized token and phrase matching against JSON-driven intent configs. Priority-based scoring with multi-signal ranking — trigger length, token count, and config order — for precise, deterministic responses.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-2"><span class="product-feature-icon">🧠</span><h4>Persistent Memory</h4><p>Structured fact storage in memory.json with conversation transcript logging. Supports name recall, memory export, selective forgetting, and recent-turn retrieval across sessions.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-3"><span class="product-feature-icon">📋</span><h4>Full Organizer</h4><p>Built-in notes with folders and tags, task management with completion tracking, and timed reminders with natural-language scheduling — stored locally in JSON and SQLite.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-1"><span class="product-feature-icon">🖥️</span><h4>WPF Desktop GUI</h4><p>A polished C# WPF app with Chat, Memory, Organizer, Transcript, Usage, Settings, Tuning, and About pages. Communicates with the C++ engine via a JSON-line IPC protocol.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-2"><span class="product-feature-icon">🔔</span><h4>Reminder Service</h4><p>A Windows Service (Nyx.ReminderService) with SQLite-backed reminder scheduling, localhost HTTP API, optimistic concurrency, and a per-user tray notifier process for delivery.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-3"><span class="product-feature-icon">🛡️</span><h4>Safety &amp; Moderation</h4><p>Category-based safety intents with priority escalation for harmful and victim scenarios. Guided recovery flows for account security. Safety intents always outrank casual chat.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="section" style="background:var(--bg-secondary);" aria-labelledby="nyx-arch-h">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-label">Under the Hood</span>
+        <h2 id="nyx-arch-h">Multi-Layer<br><span class="grad-text--nyx">Architecture</span></h2>
+        <p>C++ engine core with .NET desktop shell and background services — all communicating over a typed JSON-line protocol.</p>
+      </div>
+      <div class="product-arch-block reveal reveal-up" style="max-width:720px;margin:0 auto;">
+        <div class="product-arch-header"><div class="product-arch-dots"><span></span><span></span><span></span></div><span class="product-arch-title">nyx-architecture.txt</span></div>
+        <div class="product-arch-body">┌───────────────────────────────────┐
+│       Nyx.Gui.exe (WPF / C#)     │
+│  Chat · Organizer · Tuning       │
+├───────────────────────────────────┤
+│    JSON-Line IPC Protocol v1     │
+│  stdin/stdout · typed envelopes  │
+├───────────────────────────────────┤
+│     nyx_cli.exe (C++20 Engine)   │
+│  IntentDetector · ChatSession    │
+│  MemoryStore  ·  OrganizerStore  │
+│  TextNormalizer · UsageStore     │
+├───────────────────────────────────┤
+│   Nyx.ReminderService (.NET)     │
+│  SQLite · HTTP API · Tray App    │
+├───────────────────────────────────┤
+│      Local Persistent Storage    │
+│  memory.json · notes.json        │
+│  tasks.json · reminders.db       │
+└───────────────────────────────────┘</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROTOCOL -->
+  <section class="section" aria-labelledby="nyx-protocol-h">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-label">Integration</span>
+        <h2 id="nyx-protocol-h">JSON-Line<br><span class="grad-text--nyx">Protocol</span></h2>
+      </div>
+      <div class="product-features-grid" style="grid-template-columns:repeat(2,1fr);max-width:800px;margin:0 auto;">
+        <div class="product-feature-card reveal reveal-up stagger-1"><span class="product-feature-icon">📨</span><h4>Typed Requests</h4><p>13+ typed request types including chat, version, config_snapshot, organizer snapshots/mutations, reminder service status, diagnostics, and shutdown — all with structured envelopes.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-2"><span class="product-feature-icon">🔧</span><h4>Safe Tuning</h4><p>Live intent trigger/response editing via save_config, with automatic validation, timestamped backup, and engine restart — IDs, categories, and priorities stay locked.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-1"><span class="product-feature-icon">🔄</span><h4>Backward Compatibility</h4><p>Plain text and legacy JSON both gracefully degrade to chat. Protocol version 1 guarantees stable envelope structure across CLI, GUI, and future clients.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-2"><span class="product-feature-icon">📊</span><h4>Usage Metering</h4><p>Local counters for total turns, daily turns, and session turns. No external telemetry — all analytics are kept on-device and fully user-controlled.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="section" style="background:var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal reveal-up"><span class="section-label">Technology</span><h2>Tech Stack</h2></div>
+      <div class="tech-stack-grid reveal reveal-up">
+        <span class="tech-stack-chip">C++20</span><span class="tech-stack-chip">C# / .NET</span><span class="tech-stack-chip">WPF (XAML)</span><span class="tech-stack-chip">nlohmann/json</span><span class="tech-stack-chip">cpp-httplib</span><span class="tech-stack-chip">SQLite</span><span class="tech-stack-chip">CMake</span><span class="tech-stack-chip">doctest</span><span class="tech-stack-chip">WiX Toolset</span><span class="tech-stack-chip">Ninja</span>
+      </div>
+
+      <!-- PLATFORM BADGES -->
+      <div style="margin-top:var(--sp-8);text-align:center;" class="reveal reveal-up">
+        <span class="section-label" style="display:block;margin-bottom:var(--sp-4);">Platform</span>
+        <div class="product-platform-grid">
+          <div class="product-platform-badge">🖥️ Windows (x64)</div>
+          <div class="product-platform-badge">⌨️ CLI</div>
+          <div class="product-platform-badge">📦 MSI Installer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="section" aria-labelledby="nyx-roadmap-h">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-label">The Future</span>
+        <h2 id="nyx-roadmap-h">From Rules<br><span class="grad-text--nyx">to Machine Learning</span></h2>
+        <p>Nyx is currently rule-based, but the architecture is designed to evolve. The goal: build a competitive AI model from the ground up.</p>
+      </div>
+      <div class="product-features-grid" style="grid-template-columns:repeat(3,1fr);">
+        <div class="product-feature-card reveal reveal-up stagger-1"><span class="product-feature-icon">✅</span><h4>Phase 1 — Rules</h4><p>Rule engine with normalized matching, intent priorities, guided flows, safety categories, and persistent memory. Desktop GUI with full organizer. <strong>Current stage.</strong></p></div>
+        <div class="product-feature-card reveal reveal-up stagger-2"><span class="product-feature-icon">🔬</span><h4>Phase 2 — ML Integration</h4><p>Introduce lightweight machine learning models for intent classification, context-aware responses, and sentiment detection — while preserving the deterministic safety layer.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-3"><span class="product-feature-icon">🚀</span><h4>Phase 3 — Competitive AI</h4><p>Scale to a fully competitive conversational AI — aiming to match the quality and capabilities of leading models like Claude and ChatGPT.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb-wrap"><div class="container"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html" class="breadcrumb-link">Home</a><span class="breadcrumb-sep" aria-hidden="true">/</span><a href="products.html" class="breadcrumb-link">Products</a><span class="breadcrumb-sep" aria-hidden="true">/</span><span class="breadcrumb-current" aria-current="page">Nyx AI</span></nav></div></div>
+
+  <!-- CTA -->
+  <section id="cta-banner"><div class="container"><div class="cta-inner reveal reveal-up">
+    <h2>Ready to Meet<br>Nyx?</h2>
+    <p>Nyx AI is built from scratch — no wrappers, no APIs, just raw engineering. Get early access or follow the journey.</p>
+    <div class="btn-group"><a href="contact.html" class="btn-white">Get in Touch</a><a href="products.html" class="btn-outline-white">View All Products</a></div>
+  </div></div></section>
+
+</main>
+<footer id="footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><div class="footer-brand-logo"><div class="footer-brand-mark">N</div><span class="footer-brand-name">Nicholas Foundation</span></div><p class="footer-desc">A technology-first foundation building innovative systems for global impact.</p><div class="footer-socials"><a href="#" class="footer-social">𝕏</a><a href="#" class="footer-social">in</a></div><div class="footer-newsletter"><div class="footer-newsletter-title">Stay Updated</div><form class="footer-newsletter-form"><input type="email" class="footer-newsletter-input" placeholder="your@email.com" /><button type="submit" class="footer-newsletter-btn">Subscribe</button></form></div></div>
+  <div class="footer-col"><div class="footer-col-title">Company</div><nav class="footer-links"><a href="about.html" class="footer-link">About Us</a><a href="products.html" class="footer-link">Products</a><a href="blog.html" class="footer-link">Blog</a><a href="careers.html" class="footer-link">Careers</a><a href="contact.html" class="footer-link">Contact</a></nav></div>
+  <div class="footer-col"><div class="footer-col-title">Products</div><nav class="footer-links"><a href="product-trux.html" class="footer-link">TruXSocial</a><a href="product-datex.html" class="footer-link">DateX Sheet</a><a href="product-nerd.html" class="footer-link">Nerd Companion</a><a href="product-nyx.html" class="footer-link">Nyx AI</a></nav></div>
+  <div class="footer-col"><div class="footer-col-title">Resources</div><nav class="footer-links"><a href="support.html" class="footer-link">Support</a><a href="faq.html" class="footer-link">FAQ</a><a href="#" class="footer-link">Docs</a></nav></div>
+</div><div class="footer-bottom"><p class="footer-copy">© <span id="footer-year"></span> The Nicholas Foundation.</p><div class="footer-bottom-links"><a href="privacy.html" class="footer-bottom-link">Privacy Policy</a><a href="privacy.html" class="footer-bottom-link">Terms of Service</a></div></div></div></footer>
+</div>
+<button id="back-to-top" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+<script>document.getElementById('footer-year').textContent=document.getElementById('sidebar-year').textContent=new Date().getFullYear();</script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="js/main.js?v=3"></script>
+<script src="js/animations.js"></script>
+<script src="js/modal.js?v=3"></script>
+<script src="js/cursor.js?v=1"></script>
+<script src="js/i18n.js?v=1"></script>
+</body>
+</html>

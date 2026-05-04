@@ -2,10 +2,10 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="TNF Products — TruXSocial, DateX Sheet, and Nerd Companion. Social, productivity, and education platforms by The Nicholas Foundation." />
+  <meta name="description" content="TNF Products — TruXSocial, DateX Sheet, Nerd Companion, and Nyx AI. Social, productivity, education, and AI platforms by The Nicholas Foundation." />
   <title>Products &amp; Services — The Nicholas Foundation</title>
   <meta property="og:title" content="Products & Services — The Nicholas Foundation" />
-  <meta property="og:description" content="Explore TruXSocial, DateX Sheet, and Nerd Companion — three flagship products by TNF." />
+  <meta property="og:description" content="Explore TruXSocial, DateX Sheet, Nerd Companion, and Nyx AI — four flagship products by TNF." />
   <meta property="og:image" content="/assets/og-card.png" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -54,7 +54,7 @@
     <div class="container" style="position:relative;z-index:1;">
       <span class="section-label">Our Platforms</span>
       <h1 id="products-hero-h">Technology That<br><span class="grad-text">Changes Everything</span></h1>
-      <p>Three flagship products designed to connect communities, power productivity, and accelerate learning — built with cutting-edge technology.</p>
+      <p>Four flagship products designed to connect communities, power productivity, accelerate learning, and build intelligent systems — all from scratch.</p>
     </div>
   </section>
 
@@ -66,6 +66,7 @@
         <button class="tag" data-filter="social">Social</button>
         <button class="tag" data-filter="productivity">Productivity</button>
         <button class="tag" data-filter="education">Education</button>
+        <button class="tag" data-filter="ai">AI</button>
       </div>
 
       <div class="product-grid" id="products-grid">
@@ -119,6 +120,23 @@
             </div>
           </div>
         </div>
+
+        <!-- Nyx AI -->
+        <div class="product-card reveal reveal-up stagger-1" data-category="ai" id="nyxai">
+          <div class="product-card-top" style="background:linear-gradient(135deg,#1a0a2e,#2d1052);"></div>
+          <div class="product-card-body">
+            <div class="badge badge-purple" style="margin-bottom:var(--sp-3);">Artificial Intelligence</div>
+            <h4>Nyx AI</h4>
+            <p>A rule-based AI assistant built from scratch in C++20 with a WPF desktop GUI, persistent memory, organizer suite, JSON-line protocol, and a roadmap to competitive machine learning.</p>
+            <div class="product-tags">
+              <span class="tech-chip">C++20</span><span class="tech-chip">C# / WPF</span><span class="tech-chip">SQLite</span><span class="tech-chip">CMake</span>
+            </div>
+            <div style="margin-top:var(--sp-5);display:flex;gap:var(--sp-3);">
+              <a href="product-nyx.html" class="btn btn-primary btn-sm">Learn More</a>
+              <a href="contact.html" class="btn btn-secondary btn-sm">Get Access</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -139,17 +157,18 @@
               <th style="text-align:center;color:#f97316;">TruXSocial</th>
               <th style="text-align:center;color:#818cf8;">DateX Sheet</th>
               <th style="text-align:center;color:#10b981;">Nerd Companion</th>
+              <th style="text-align:center;color:#a855f7;">Nyx AI</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Category</td><td>Social Media</td><td>Spreadsheet</td><td>Study App</td></tr>
-            <tr><td>Primary Language</td><td>PHP + TypeScript</td><td>Rust + TypeScript</td><td>TypeScript</td></tr>
-            <tr><td>Web Browser</td><td>✓</td><td>✓</td><td>✓</td></tr>
-            <tr><td>Desktop App</td><td>—</td><td>✓ (Tauri 2)</td><td>✓ (Electron)</td></tr>
-            <tr><td>Mobile App</td><td>—</td><td>—</td><td>✓ (iOS + Android)</td></tr>
-            <tr><td>Database</td><td>MySQL / MariaDB</td><td>SQLite / IndexedDB</td><td>SQLite</td></tr>
-            <tr><td>Real-Time</td><td>AJAX Polling</td><td>In-Memory WASM</td><td>Local-First</td></tr>
-            <tr><td>Status</td><td>Active Development</td><td>Active Development</td><td>Active Development</td></tr>
+            <tr><td>Category</td><td>Social Media</td><td>Spreadsheet</td><td>Study App</td><td>AI Assistant</td></tr>
+            <tr><td>Primary Language</td><td>PHP + TypeScript</td><td>Rust + TypeScript</td><td>TypeScript</td><td>C++20 + C#</td></tr>
+            <tr><td>Web Browser</td><td>✓</td><td>✓</td><td>✓</td><td>—</td></tr>
+            <tr><td>Desktop App</td><td>—</td><td>✓ (Tauri 2)</td><td>✓ (Electron)</td><td>✓ (WPF)</td></tr>
+            <tr><td>Mobile App</td><td>—</td><td>—</td><td>✓ (iOS + Android)</td><td>—</td></tr>
+            <tr><td>Database</td><td>MySQL / MariaDB</td><td>SQLite / IndexedDB</td><td>SQLite</td><td>SQLite / JSON</td></tr>
+            <tr><td>Real-Time</td><td>AJAX Polling</td><td>In-Memory WASM</td><td>Local-First</td><td>JSON-Line IPC</td></tr>
+            <tr><td>Status</td><td>Active Development</td><td>Active Development</td><td>Active Development</td><td>Active Development</td></tr>
           </tbody>
         </table>
       </div>
@@ -180,7 +199,7 @@
 <footer id="footer"><div class="container"><div class="footer-grid">
   <div class="footer-brand"><div class="footer-brand-logo"><div class="footer-brand-mark">N</div><span class="footer-brand-name">Nicholas Foundation</span></div><p class="footer-desc" data-i18n="footer.desc">A technology-first foundation building innovative systems for global impact.</p><div class="footer-socials"><a href="#" class="footer-social">𝕏</a><a href="#" class="footer-social">in</a></div><div class="footer-newsletter"><div class="footer-newsletter-title" data-i18n="footer.stayupdated">Stay Updated</div><form class="footer-newsletter-form"><input type="email" class="footer-newsletter-input" placeholder="your@email.com" /><button type="submit" class="footer-newsletter-btn" data-i18n="btn.subscribe">Subscribe</button></form></div></div>
   <div class="footer-col"><div class="footer-col-title" data-i18n="footer.company">Company</div><nav class="footer-links"><a href="about.html" class="footer-link">About Us</a><a href="products.html" class="footer-link">Products</a><a href="blog.html" class="footer-link">Blog</a><a href="careers.html" class="footer-link">Careers</a><a href="contact.html" class="footer-link">Contact</a></nav></div>
-  <div class="footer-col"><div class="footer-col-title">Products</div><nav class="footer-links"><a href="product-trux.html" class="footer-link">TruXSocial</a><a href="product-datex.html" class="footer-link">DateX Sheet</a><a href="product-nerd.html" class="footer-link">Nerd Companion</a></nav></div>
+  <div class="footer-col"><div class="footer-col-title">Products</div><nav class="footer-links"><a href="product-trux.html" class="footer-link">TruXSocial</a><a href="product-datex.html" class="footer-link">DateX Sheet</a><a href="product-nerd.html" class="footer-link">Nerd Companion</a><a href="product-nyx.html" class="footer-link">Nyx AI</a></nav></div>
   <div class="footer-col"><div class="footer-col-title" data-i18n="footer.resources">Resources</div><nav class="footer-links"><a href="support.html" class="footer-link">Support</a><a href="faq.html" class="footer-link">FAQ</a><a href="#" class="footer-link">Docs</a><a href="#" class="footer-link">GitHub</a></nav></div>
 </div><div class="footer-bottom"><p class="footer-copy">© <span id="footer-year"></span> The Nicholas Foundation.</p><div class="footer-bottom-links"><a href="privacy.html" class="footer-bottom-link" data-i18n="footer.privacy">Privacy Policy</a><a href="privacy.html" class="footer-bottom-link" data-i18n="footer.terms">Terms of Service</a></div></div></div></footer>
 </div>
