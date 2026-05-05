@@ -29,10 +29,10 @@
 </nav>
 <div id="sidebar-backdrop"></div>
 <aside id="sidebar" role="dialog" aria-label="Navigation" aria-modal="true">
-  <div class="sidebar-header"><div class="sidebar-logo"><div class="sidebar-logo-mark">N</div><span class="sidebar-logo-name">Nicholas Foundation</span></div><button id="sidebar-close" aria-label="Close">✕</button></div>
+  <div class="sidebar-header"><div class="sidebar-logo"><div class="sidebar-logo-mark">N</div><span class="sidebar-logo-name">Nicholas Foundation</span></div><button id="sidebar-close" aria-label="Close"><i data-lucide="x"></i></button></div>
   <nav class="sidebar-nav">
-    <div class="sidebar-nav-group"><div class="sidebar-nav-label">Main</div><a href="index.html" class="sidebar-nav-link"><span class="nav-icon">🏠</span> Home</a><a href="about.html" class="sidebar-nav-link"><span class="nav-icon">🔭</span> About Us</a><a href="products.html" class="sidebar-nav-link active"><span class="nav-icon">⚡</span> Products &amp; Services</a><a href="blog.html" class="sidebar-nav-link"><span class="nav-icon">📡</span> Blog</a></div>
-    <div class="sidebar-nav-group"><div class="sidebar-nav-label">Company</div><a href="careers.html" class="sidebar-nav-link"><span class="nav-icon">🚀</span> Careers</a><a href="contact.html" class="sidebar-nav-link"><span class="nav-icon">✉️</span> Contact Us</a><a href="support.html" class="sidebar-nav-link"><span class="nav-icon">🛡️</span> Support</a><a href="faq.html" class="sidebar-nav-link"><span class="nav-icon">💡</span> FAQ</a><a href="privacy.html" class="sidebar-nav-link"><span class="nav-icon">🔒</span> Privacy</a></div>
+    <div class="sidebar-nav-group"><div class="sidebar-nav-label">Main</div><a href="index.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="home"></i></span> Home</a><a href="about.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="telescope"></i></span> About Us</a><a href="products.html" class="sidebar-nav-link active"><span class="nav-icon"><i data-lucide="zap"></i></span> Products &amp; Services</a><a href="blog.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="rss"></i></span> Blog</a></div>
+    <div class="sidebar-nav-group"><div class="sidebar-nav-label">Company</div><a href="careers.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="rocket"></i></span> Careers</a><a href="contact.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="mail"></i></span> Contact Us</a><a href="support.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="shield"></i></span> Support</a><a href="faq.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="lightbulb"></i></span> FAQ</a><a href="privacy.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="lock"></i></span> Privacy</a></div>
   </nav>
   <div class="sidebar-footer"><div class="sidebar-socials"><a href="#" class="sidebar-social-link">𝕏</a><a href="#" class="sidebar-social-link">in</a></div><p class="sidebar-copy">© <span id="sidebar-year"></span> The Nicholas Foundation</p></div>
 </aside>
@@ -46,7 +46,7 @@
     <div class="grid-overlay" aria-hidden="true"></div>
     <div class="container" style="position:relative;z-index:1;">
       <span class="section-label">Productivity</span>
-      <span class="product-hero-icon" aria-hidden="true">📊</span>
+      <span class="product-hero-icon" aria-hidden="true"><i data-lucide="bar-chart-3"></i></span>
       <h1 id="datex-hero-h">DateX <span class="grad-text--datex">Sheet</span></h1>
       <p class="product-hero-tagline">A modern spreadsheet and data workspace designed to feel faster, cleaner, and more refined than legacy tools. Powered by a Rust engine compiled to WebAssembly — open and work.</p>
       <div style="display:flex;gap:var(--sp-4);justify-content:center;flex-wrap:wrap;">
@@ -76,12 +76,12 @@
         <h2 id="datex-features-h">Spreadsheets<br><span class="grad-text--datex">Without Limits</span></h2>
       </div>
       <div class="product-features-grid">
-        <div class="product-feature-card reveal reveal-up stagger-1"><span class="product-feature-icon">🎨</span><h4>Canvas-Based Grid</h4><p>Virtualized rendering with zero DOM-per-cell overhead. Buttery smooth scrolling at 60fps sustained, even with 100,000+ filled cells.</p></div>
-        <div class="product-feature-card reveal reveal-up stagger-2"><span class="product-feature-icon">⚙️</span><h4>WASM-Powered Engine</h4><p>Formula parsing, dependency tracking, and recalculation run at near-native speed via a Rust engine compiled to WebAssembly. Sub-millisecond recalc on edit.</p></div>
-        <div class="product-feature-card reveal reveal-up stagger-3"><span class="product-feature-icon">📐</span><h4>Formula System</h4><p>SUM, AVERAGE, MIN, MAX, COUNT, IF, CONCATENATE, and more. Recursive-descent parser with directed acyclic graph dependency tracking and Tarjan's circular reference detection.</p></div>
-        <div class="product-feature-card reveal reveal-up stagger-1"><span class="product-feature-icon">📑</span><h4>Multi-Sheet Workbooks</h4><p>Create, rename, reorder, duplicate, and delete sheets within a workbook. Full cross-sheet formula references with automatic dependency resolution.</p></div>
-        <div class="product-feature-card reveal reveal-up stagger-2"><span class="product-feature-icon">💾</span><h4>Local Persistence</h4><p>IndexedDB (browser) and SQLite (desktop) with 3-second autosave under 50ms latency. Operation-log-based undo/redo with unlimited depth and grouped edits.</p></div>
-        <div class="product-feature-card reveal reveal-up stagger-3"><span class="product-feature-icon">🖥️</span><h4>Cross-Platform</h4><p>Runs everywhere — web browser via Vite + React 19, and native desktop via Tauri 2 (Windows, macOS, Linux), all sharing the same Rust backend.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-1"><span class="product-feature-icon"><i data-lucide="palette"></i></span><h4>Canvas-Based Grid</h4><p>Virtualized rendering with zero DOM-per-cell overhead. Buttery smooth scrolling at 60fps sustained, even with 100,000+ filled cells.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-2"><span class="product-feature-icon"><i data-lucide="settings"></i></span><h4>WASM-Powered Engine</h4><p>Formula parsing, dependency tracking, and recalculation run at near-native speed via a Rust engine compiled to WebAssembly. Sub-millisecond recalc on edit.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-3"><span class="product-feature-icon"><i data-lucide="ruler"></i></span><h4>Formula System</h4><p>SUM, AVERAGE, MIN, MAX, COUNT, IF, CONCATENATE, and more. Recursive-descent parser with directed acyclic graph dependency tracking and Tarjan's circular reference detection.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-1"><span class="product-feature-icon"><i data-lucide="file-spreadsheet"></i></span><h4>Multi-Sheet Workbooks</h4><p>Create, rename, reorder, duplicate, and delete sheets within a workbook. Full cross-sheet formula references with automatic dependency resolution.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-2"><span class="product-feature-icon"><i data-lucide="save"></i></span><h4>Local Persistence</h4><p>IndexedDB (browser) and SQLite (desktop) with 3-second autosave under 50ms latency. Operation-log-based undo/redo with unlimited depth and grouped edits.</p></div>
+        <div class="product-feature-card reveal reveal-up stagger-3"><span class="product-feature-icon"><i data-lucide="monitor"></i></span><h4>Cross-Platform</h4><p>Runs everywhere — web browser via Vite + React 19, and native desktop via Tauri 2 (Windows, macOS, Linux), all sharing the same Rust backend.</p></div>
       </div>
     </div>
   </section>
@@ -148,10 +148,10 @@
         <h2 id="datex-platforms-h">Available Everywhere</h2>
       </div>
       <div class="platform-grid reveal reveal-up">
-        <div class="platform-badge"><span class="platform-badge-icon">🌐</span><span class="platform-badge-name">Web Browser</span><span class="platform-badge-status platform-badge-status--dev">In Dev</span></div>
-        <div class="platform-badge"><span class="platform-badge-icon">🪟</span><span class="platform-badge-name">Windows</span><span class="platform-badge-status platform-badge-status--dev">In Dev</span></div>
-        <div class="platform-badge"><span class="platform-badge-icon">🍎</span><span class="platform-badge-name">macOS</span><span class="platform-badge-status platform-badge-status--planned">Planned</span></div>
-        <div class="platform-badge"><span class="platform-badge-icon">🐧</span><span class="platform-badge-name">Linux</span><span class="platform-badge-status platform-badge-status--planned">Planned</span></div>
+        <div class="platform-badge"><span class="platform-badge-icon"><i data-lucide="globe"></i></span><span class="platform-badge-name">Web Browser</span><span class="platform-badge-status platform-badge-status--dev">In Dev</span></div>
+        <div class="platform-badge"><span class="platform-badge-icon"><i data-lucide="app-window"></i></span><span class="platform-badge-name">Windows</span><span class="platform-badge-status platform-badge-status--dev">In Dev</span></div>
+        <div class="platform-badge"><span class="platform-badge-icon"><i data-lucide="apple"></i></span><span class="platform-badge-name">macOS</span><span class="platform-badge-status platform-badge-status--planned">Planned</span></div>
+        <div class="platform-badge"><span class="platform-badge-icon"><i data-lucide="terminal"></i></span><span class="platform-badge-name">Linux</span><span class="platform-badge-status platform-badge-status--planned">Planned</span></div>
       </div>
     </div>
   </section>
@@ -192,5 +192,7 @@
 <script src="js/modal.js?v=3"></script>
 <script src="js/cursor.js?v=1"></script>
 <script src="js/i18n.js?v=1"></script>
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{if(window.lucide)lucide.createIcons();});</script>
 </body>
 </html>

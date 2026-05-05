@@ -174,6 +174,52 @@ input, textarea, select { font-family: inherit; outline: none; }
 table { border-collapse: collapse; }
 
 /* =============================================================================
+   3b. Lucide Icon Defaults
+   Lucide renders <i data-lucide> → <svg>. Size and color via CSS.
+   ============================================================================= */
+/* Base: inherit size and color from parent */
+[data-lucide] { display: inline-flex; align-items: center; justify-content: center; }
+[data-lucide] svg,
+i[data-lucide] svg {
+  width: 1em; height: 1em;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  vertical-align: middle;
+}
+
+/* Sidebar nav icons — 18px inside 34px container */
+.nav-icon [data-lucide] svg,
+.nav-icon i[data-lucide] svg   { width: 18px; height: 18px; }
+
+/* Product hero icon — 56px */
+.product-hero-icon [data-lucide] svg,
+.product-hero-icon > svg { width: 56px; height: 56px; stroke-width: 1.5; }
+
+/* Feature / value / card icons — 28px */
+.value-icon [data-lucide] svg,
+.card-icon [data-lucide] svg,
+.research-capability-icon [data-lucide] svg,
+.research-principle-icon [data-lucide] svg,
+.research-focus-icon [data-lucide] svg { width: 28px; height: 28px; }
+
+/* Footer contact icon — 16px */
+.footer-contact-icon [data-lucide] svg { width: 16px; height: 16px; }
+
+/* Announcement / cookie banner icons — 16px */
+.announcement-icon [data-lucide] svg { width: 16px; height: 16px; }
+
+/* Search result icons — 20px */
+.search-result-icon [data-lucide] svg { width: 20px; height: 20px; }
+
+/* Inline icons in text — match text size */
+strong [data-lucide] svg,
+p [data-lucide] svg,
+span [data-lucide] svg,
+h4 [data-lucide] svg,
+h5 [data-lucide] svg { width: 1em; height: 1em; }
+
+/* =============================================================================
    4. Typography System
    ============================================================================= */
 h1, h2, h3, h4, h5, h6 {

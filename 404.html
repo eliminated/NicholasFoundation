@@ -123,10 +123,10 @@
 </nav>
 <div id="sidebar-backdrop"></div>
 <aside id="sidebar" role="dialog" aria-label="Navigation" aria-modal="true">
-  <div class="sidebar-header"><div class="sidebar-logo"><div class="sidebar-logo-mark">N</div><span class="sidebar-logo-name">Nicholas Foundation</span></div><button id="sidebar-close" aria-label="Close">✕</button></div>
+  <div class="sidebar-header"><div class="sidebar-logo"><div class="sidebar-logo-mark">N</div><span class="sidebar-logo-name">Nicholas Foundation</span></div><button id="sidebar-close" aria-label="Close"><i data-lucide="x"></i></button></div>
   <nav class="sidebar-nav">
-    <div class="sidebar-nav-group"><div class="sidebar-nav-label" data-i18n="sidebar.main">Main</div><a href="index.html" class="sidebar-nav-link"><span class="nav-icon">🏠</span> <span data-i18n="sidebar.home">Home</span></a><a href="about.html" class="sidebar-nav-link"><span class="nav-icon">🔭</span> About</a><a href="products.html" class="sidebar-nav-link"><span class="nav-icon">⚡</span> Products</a><a href="research.html" class="sidebar-nav-link"><span class="nav-icon">??</span> Research</a><a href="blog.html" class="sidebar-nav-link"><span class="nav-icon">📡</span> <span data-i18n="sidebar.blog">Blog</span></a></div>
-    <div class="sidebar-nav-group"><div class="sidebar-nav-label" data-i18n="sidebar.company">Company</div><a href="careers.html" class="sidebar-nav-link"><span class="nav-icon">🚀</span> <span data-i18n="sidebar.careers">Careers</span></a><a href="contact.html" class="sidebar-nav-link"><span class="nav-icon">✉️</span> Contact</a><a href="support.html" class="sidebar-nav-link"><span class="nav-icon">🛡️</span> <span data-i18n="sidebar.support">Support</span></a><a href="faq.html" class="sidebar-nav-link"><span class="nav-icon">💡</span> <span data-i18n="sidebar.faq">FAQ</span></a><a href="privacy.html" class="sidebar-nav-link"><span class="nav-icon">🔒</span> Privacy</a></div>
+    <div class="sidebar-nav-group"><div class="sidebar-nav-label" data-i18n="sidebar.main">Main</div><a href="index.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="home"></i></span> <span data-i18n="sidebar.home">Home</span></a><a href="about.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="telescope"></i></span> About</a><a href="products.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="zap"></i></span> Products</a><a href="research.html" class="sidebar-nav-link"><span class="nav-icon">??</span> Research</a><a href="blog.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="rss"></i></span> <span data-i18n="sidebar.blog">Blog</span></a></div>
+    <div class="sidebar-nav-group"><div class="sidebar-nav-label" data-i18n="sidebar.company">Company</div><a href="careers.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="rocket"></i></span> <span data-i18n="sidebar.careers">Careers</span></a><a href="contact.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="mail"></i></span> Contact</a><a href="support.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="shield"></i></span> <span data-i18n="sidebar.support">Support</span></a><a href="faq.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="lightbulb"></i></span> <span data-i18n="sidebar.faq">FAQ</span></a><a href="privacy.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="lock"></i></span> Privacy</a></div>
   </nav>
   <div class="sidebar-footer"><div class="sidebar-socials"><a href="#" class="sidebar-social-link">𝕏</a><a href="#" class="sidebar-social-link">in</a></div><p class="sidebar-copy">© <span id="sidebar-year"></span> The Nicholas Foundation</p></div>
 </aside>
@@ -160,7 +160,7 @@
 
 <!-- Cookie Consent -->
 <div id="cookie-consent" class="cookie-banner" role="dialog" aria-modal="true" aria-label="Cookie preferences" aria-live="polite">
-  <div class="cookie-text"><strong data-i18n="cookie.title">🍪 We use minimal cookies</strong> <span data-i18n="cookie.desc">to save your preferences and understand how our site is used.</span> <a href="privacy.html#cookies" class="cookie-link" data-i18n="cookie.learn">Learn more</a></div>
+  <div class="cookie-text"><strong data-i18n="cookie.title"><i data-lucide="cookie"></i> We use minimal cookies</strong> <span data-i18n="cookie.desc">to save your preferences and understand how our site is used.</span> <a href="privacy.html#cookies" class="cookie-link" data-i18n="cookie.learn">Learn more</a></div>
   <div class="cookie-actions"><button id="cookie-reject" class="btn btn-sm btn-secondary" data-i18n="cookie.essential">Essential Only</button><button id="cookie-accept" class="btn btn-sm btn-primary" data-i18n="cookie.accept">Accept All</button></div>
 </div>
 </div>
@@ -195,6 +195,8 @@
 <script src="js/modal.js?v=3"></script>
 <script src="js/cursor.js?v=1"></script>
 <script src="js/i18n.js?v=1"></script>
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{if(window.lucide)lucide.createIcons();});</script>
 <script src="js/enhancements.js?v=3"></script>
 </body>
 </html>

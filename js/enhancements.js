@@ -146,70 +146,70 @@ const GlobalSearch = (() => {
       url: 'index.html',
       desc: 'Engineering the future of innovative systems for global impact.',
       tags: ['home', 'hero', 'mission', 'ai', 'blockchain', 'impact', 'open source'],
-      icon: '🏠',
+      icon: '<i data-lucide="home"></i>',
     },
     {
       title: 'About Us',
       url: 'about.html',
       desc: 'Our mission, vision, history, leadership team, and core values.',
       tags: ['about', 'team', 'mission', 'vision', 'history', 'values', 'timeline', 'partners'],
-      icon: '🔭',
+      icon: '<i data-lucide="telescope"></i>',
     },
     {
       title: 'Products & Services',
       url: 'products.html',
       desc: 'FedCore, DID.chain, GlobalPulse API, OfflineKit, SecureLayer, OpenData Commons.',
       tags: ['products', 'platforms', 'fedcore', 'blockchain', 'api', 'offlinekit', 'security', 'datasets', 'federated learning'],
-      icon: '⚡',
+      icon: '<i data-lucide="zap"></i>',
     },
     {
       title: 'Careers',
       url: 'careers.html',
       desc: 'Open roles in engineering, research, partnerships, and design.',
       tags: ['careers', 'jobs', 'hiring', 'remote', 'engineering', 'research', 'roles', 'benefits', 'apply'],
-      icon: '🚀',
+      icon: '<i data-lucide="rocket"></i>',
     },
     {
       title: 'Contact Us',
       url: 'contact.html',
       desc: 'Get in touch for partnerships, technical support, media, or general inquiries.',
       tags: ['contact', 'email', 'partnerships', 'support', 'press', 'media', 'message'],
-      icon: '✉️',
+      icon: '<i data-lucide="mail"></i>',
     },
     {
       title: 'Support Center',
       url: 'support.html',
       desc: 'Documentation, guides, and help for all TNF platforms.',
       tags: ['support', 'docs', 'help', 'documentation', 'api', 'fedcore', 'articles', 'search'],
-      icon: '🛡️',
+      icon: '<i data-lucide="shield"></i>',
     },
     {
       title: 'FAQ',
       url: 'faq.html',
       desc: 'Frequently asked questions about TNF, licensing, partnerships, and technical setup.',
       tags: ['faq', 'questions', 'licensing', 'mit', 'nonprofit', 'partnership', 'fedcore', 'api'],
-      icon: '💡',
+      icon: '<i data-lucide="lightbulb"></i>',
     },
     {
       title: 'Blog',
       url: 'blog.html',
       desc: 'Research insights, technical deep dives, and impact stories from the TNF team.',
       tags: ['blog', 'research', 'articles', 'federated learning', 'blockchain', 'impact', 'agi', 'safety'],
-      icon: '📡',
+      icon: '<i data-lucide="rss"></i>',
     },
     {
       title: 'Research',
       url: 'research.html',
       desc: 'Our AI research — building the Nyx AI engine from scratch, starting with a rule-based approach and evolving toward full machine learning.',
       tags: ['research', 'nyx', 'ai', 'artificial intelligence', 'rule-based', 'machine learning', 'engine', 'safety', 'memory', 'organizer'],
-      icon: '🔬',
+      icon: '<i data-lucide="microscope"></i>',
     },
     {
       title: 'Privacy & Terms',
       url: 'privacy.html',
       desc: 'Privacy policy, terms of service, data rights, cookies, and acceptable use.',
       tags: ['privacy', 'terms', 'gdpr', 'cookies', 'data', 'legal', 'rights', 'security'],
-      icon: '🔒',
+      icon: '<i data-lucide="lock"></i>',
     },
   ];
 
@@ -260,6 +260,8 @@ const GlobalSearch = (() => {
         <span class="search-result-arrow">→</span>
       </a>
     `).join('');
+    // Render Lucide icons in dynamically generated search results
+    if (window.lucide) window.lucide.createIcons();
   }
 
   function setActive(idx) {

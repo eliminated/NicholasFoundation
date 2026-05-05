@@ -32,10 +32,10 @@
 </nav>
 <div id="sidebar-backdrop"></div>
 <aside id="sidebar" role="dialog" aria-label="Navigation" aria-modal="true">
-  <div class="sidebar-header"><div class="sidebar-logo"><div class="sidebar-logo-mark">N</div><span class="sidebar-logo-name">Nicholas Foundation</span></div><button id="sidebar-close" aria-label="Close">✕</button></div>
+  <div class="sidebar-header"><div class="sidebar-logo"><div class="sidebar-logo-mark">N</div><span class="sidebar-logo-name">Nicholas Foundation</span></div><button id="sidebar-close" aria-label="Close"><i data-lucide="x"></i></button></div>
   <nav class="sidebar-nav">
-    <div class="sidebar-nav-group"><div class="sidebar-nav-label" data-i18n="sidebar.main">Main</div><a href="index.html" class="sidebar-nav-link"><span class="nav-icon">🏠</span> Home</a><a href="about.html" class="sidebar-nav-link"><span class="nav-icon">🔭</span> About Us</a><a href="products.html" class="sidebar-nav-link active"><span class="nav-icon">⚡</span> Products &amp; Services</a><a href="blog.html" class="sidebar-nav-link"><span class="nav-icon">📡</span> Blog</a></div>
-    <div class="sidebar-nav-group"><div class="sidebar-nav-label" data-i18n="sidebar.company">Company</div><a href="careers.html" class="sidebar-nav-link"><span class="nav-icon">🚀</span> Careers</a><a href="contact.html" class="sidebar-nav-link"><span class="nav-icon">✉️</span> Contact Us</a><a href="support.html" class="sidebar-nav-link"><span class="nav-icon">🛡️</span> Support</a><a href="faq.html" class="sidebar-nav-link"><span class="nav-icon">💡</span> FAQ</a><a href="privacy.html" class="sidebar-nav-link"><span class="nav-icon">🔒</span> Privacy</a></div>
+    <div class="sidebar-nav-group"><div class="sidebar-nav-label" data-i18n="sidebar.main">Main</div><a href="index.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="home"></i></span> Home</a><a href="about.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="telescope"></i></span> About Us</a><a href="products.html" class="sidebar-nav-link active"><span class="nav-icon"><i data-lucide="zap"></i></span> Products &amp; Services</a><a href="blog.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="rss"></i></span> Blog</a></div>
+    <div class="sidebar-nav-group"><div class="sidebar-nav-label" data-i18n="sidebar.company">Company</div><a href="careers.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="rocket"></i></span> Careers</a><a href="contact.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="mail"></i></span> Contact Us</a><a href="support.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="shield"></i></span> Support</a><a href="faq.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="lightbulb"></i></span> FAQ</a><a href="privacy.html" class="sidebar-nav-link"><span class="nav-icon"><i data-lucide="lock"></i></span> Privacy</a></div>
   </nav>
   <div class="sidebar-footer"><div class="sidebar-socials"><a href="#" class="sidebar-social-link">𝕏</a><a href="#" class="sidebar-social-link">in</a></div><p class="sidebar-copy">© <span id="sidebar-year"></span> The Nicholas Foundation</p></div>
 </aside>
@@ -43,8 +43,8 @@
 <div class="page-wrapper">
 <!-- Announcement Banner -->
 <div id="announcement-banner" class="announcement-banner" role="alert">
-  <div class="announcement-content"><span class="announcement-icon">🚀</span><span>The Nicholas Foundation — Building innovative technology for a better tomorrow. <a href="about.html" class="announcement-link">Learn more →</a></span></div>
-  <button class="announcement-close" id="close-announcement" aria-label="Dismiss">✕</button>
+  <div class="announcement-content"><span class="announcement-icon"><i data-lucide="rocket"></i></span><span>The Nicholas Foundation — Building innovative technology for a better tomorrow. <a href="about.html" class="announcement-link">Learn more →</a></span></div>
+  <button class="announcement-close" id="close-announcement" aria-label="Dismiss"><i data-lucide="x"></i></button>
 </div>
 
 <main id="main-content">
@@ -163,9 +163,9 @@
           <tbody>
             <tr><td>Category</td><td>Social Media</td><td>Spreadsheet</td><td>Study App</td><td>AI Assistant</td></tr>
             <tr><td>Primary Language</td><td>PHP + TypeScript</td><td>Rust + TypeScript</td><td>TypeScript</td><td>C++20 + C#</td></tr>
-            <tr><td>Web Browser</td><td>✓</td><td>✓</td><td>✓</td><td>—</td></tr>
-            <tr><td>Desktop App</td><td>—</td><td>✓ (Tauri 2)</td><td>✓ (Electron)</td><td>✓ (WPF)</td></tr>
-            <tr><td>Mobile App</td><td>—</td><td>—</td><td>✓ (iOS + Android)</td><td>—</td></tr>
+            <tr><td>Web Browser</td><td><i data-lucide="check"></i></td><td><i data-lucide="check"></i></td><td><i data-lucide="check"></i></td><td>—</td></tr>
+            <tr><td>Desktop App</td><td>—</td><td><i data-lucide="check"></i> (Tauri 2)</td><td><i data-lucide="check"></i> (Electron)</td><td><i data-lucide="check"></i> (WPF)</td></tr>
+            <tr><td>Mobile App</td><td>—</td><td>—</td><td><i data-lucide="check"></i> (iOS + Android)</td><td>—</td></tr>
             <tr><td>Database</td><td>MySQL / MariaDB</td><td>SQLite / IndexedDB</td><td>SQLite</td><td>SQLite / JSON</td></tr>
             <tr><td>Real-Time</td><td>AJAX Polling</td><td>In-Memory WASM</td><td>Local-First</td><td>JSON-Line IPC</td></tr>
             <tr><td>Status</td><td>Active Development</td><td>Active Development</td><td>Active Development</td><td>Active Development</td></tr>
@@ -233,5 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{if(window.lucide)lucide.createIcons();});</script>
 </body>
 </html>
